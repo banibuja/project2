@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+main{
+    font-family: 'Outfit', sans-serif;
+ 
+}
+
+.light-bg {
+    background-color: #f1f3f5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.imgtog5{
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}

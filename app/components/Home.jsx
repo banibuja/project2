@@ -8,7 +8,34 @@ function Home() {
 
 
   const [showColumns, setShowColumns] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
 
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "Wie lange habe ich Zugang zum Kurs?",
+      answer: "Du hast mindestens 12 Monate Zugang zum Kursmaterial. Das heißt, du kannst den Kurs in deinem eigenen Tempo durcharbeiten und jederzeit Inhalte erneut ansehen."
+    },
+    {
+      question: "Brauche ich bereits Erfahrung im Trading?",
+      answer: "Nein, der Kurs ist sowohl für Anfänger als auch für Fortgeschrittene geeignet. Du wirst Schritt für Schritt durch den gesamten Prozess geführt."
+    },
+    {
+      question: "Wie viel Zeit muss ich in das Trading investieren?",
+      answer: "Das hängt von deinen Zielen und deinem aktuellen Wissensstand ab. Es wird empfohlen, täglich mindestens 1 Stunde zu investieren, um die besten Ergebnisse zu erzielen."
+    },
+    {
+      question: "Ist der Kurs auch für Fortgeschrittene sinnvoll?",
+      answer: "Ja, auch Fortgeschrittene können von fortgeschrittenen Strategien und Techniken im Kurs profitieren."
+    },
+    {
+      question: "Gibt es aktiven Support?",
+      answer: "Ja, wir bieten aktiven Support durch unser Team, das dir bei Fragen oder Problemen zur Seite steht."
+    }
+  ];
   const handleShowColumns = () => {
     setShowColumns(true); 
   };
@@ -45,35 +72,36 @@ function Home() {
         </nav>
       </header>
 
-      <div className="relative w-screen flex flex-col items-center z-20 mt-10">
-        <div className="text-[12px] text-black font-bold bg-white py-2 rounded-3xl px-4 flex items-center uppercase mt-4">
-          <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
-          Kostenloser Trading-Kurs
-        </div>
+      <div className=" w-full relative  flex flex-col items-center justify-center z-20 mt-10 sm:mt-5">
+  <div className="text-[12px] text-black font-bold bg-white itepy-2 rounded-3xl px-4 flex ms-center uppercase mt-4 sm:mt-2">
+    <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
+    Kostenloser Trading-Kurs
+  </div>
 
-        <h1 className='text-center text-black text-[28px] md:text-[56px] tracking-[.7px] font-bold leading-[1.1] mt-6'>
-          In nur 7 Tagen seriös <br /> Trading lernen
-        </h1>
+  <h1 className='text-center text-black text-[28px] md:text-[56px] tracking-[.7px] font-bold leading-[1.1] mt-6 sm:text-[22px] sm:leading-[1.2]'>
+    In nur 7 Tagen seriös <br /> Trading lernen
+  </h1>
 
-        <div className="text-center text-black text-[16px] text-[#7289] tracking-[.32px] font-[1.5] my-4 px-4">
-          Dein Start ins Daytrading mit Schritt für Schritt Anleitungen, sofort <br /> umsetzbaren Tipps, Brokerempfehlungen, Chartanalyse und DAX <br /> Strategie für nachhaltig profitables Trading.
-        </div>
+  <div className=" desc1 text-center w-[30rem]  text-[16px] text-[#728291] tracking-[-.32px] leading-[1.5] my-4 px-4  sm:tracking-[.2px] sm:px-2">
+    Dein Start ins Daytrading mit Schritt für Schritt Anleitungen, sofort umsetzbaren Tipps, Brokerempfehlungen, Chartanalyse und DAX  Strategie für nachhaltig profitables Trading.
+  </div>
 
-        <div className="bg-[#13f97b] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 mt-5 relative">
-  <div className="btn-text w-full text-center">
+  <div className="button bg-[#13f97b] mt-[2rem] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
+  <div className="btn-text w-full text-center z-10">
     Jetzt kostenlosen Zugang sichern
   </div>
 
-  <div className="btn-arrow-icon"> 
+  <div className="btn-arrow-icon z-10">
     <img 
       src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg" 
       alt="Arrow"
     />
   </div>
 
-  <div className="interaction absolute top-0 left-0 h-full w-[388px] animate-interaction">
-    <img className="h-full w-full object-cover"
-      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webps"
+  <div className="interaction absolute top-0 left-0 h-full w-full animate-interaction pointer-events-none">
+    <img 
+      className="h-full w-full object-cover"
+      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
       alt="interaction"
       loading="lazy"
       sizes="(max-width: 100px), 200.998046875px"
@@ -82,19 +110,18 @@ function Home() {
   </div>
 </div>
 
-
-          <div className="flex items-center justify-center mt-[2rem] z-20">
-          <img
-            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
-            alt="Avatar"
-            width={114}
-            height={30.19}
-          />
-          <div className="text-people ml-4 text-black text-[12px]">
-            Beretis <strong>2.145+</strong> Mal bestellt
-          </div>
-          </div>
-          </div>
+  <div className="flex items-center justify-center mt-[2rem] z-20 sm:mt-[1rem]">
+    <img
+      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+      alt="Avatar"
+      width={114}
+      height={30.19}
+    />
+    <div className="text-people ml-4 text-black text-[12px] sm:text-[10px]">
+      Beretis <strong>2.145+</strong> Mal bestellt
+    </div>
+  </div>
+</div>
 
         
 
@@ -108,325 +135,299 @@ function Home() {
 
 <div className="relative z-20 mt-[5rem]">
   <img
-    className="w-[925px] h-[430.02px] object-cover mx-auto relative"
+    className="images1 w-[925px] h-[430.02px] object-cover mx-auto relative sm:w-[90%] sm:h-auto md:w-[30%] lg:w-[50%]"
     src="images/png1.png"
     alt="New Image"
     loading='lazy'
     sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 1439px) 92vw, 925px"
-    srcset="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-500.webp 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-800.webp 800w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-1080.webp 1080w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-1600.webp 1600w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-2000.webp 2000w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-2600.webp 2600w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-3200.webp 3200w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2.webp 3959w"
+    srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-500.webp 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-800.webp 800w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-1080.webp 1080w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-1600.webp 1600w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-2000.webp 2000w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-2600.webp 2600w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-3200.webp 3200w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2.webp 3959w"
   />
 
   <div
-          className="absolute inset-auto w-full h-[250px] bg-gradient-to-b from-[#f1f3f500] to-[#f1f3f5] z-30"
-          style={{ inset: 'auto 0% -1%' }}
-        ></div>
+    className="blur-white absolute inset-auto w-full h-[250px] bg-gradient-to-b from-[#f1f3f500] to-[#f1f3f5] z-30"
+    style={{ inset: 'auto 0% -1%' }}
+  ></div>
+</div>
+
+<div className="grid grid-cols-2 gap-4 sm:w-[90%] md:grid-cols-6 md:w-[70%] m-auto mt-[5rem]">
+  <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c5162bf58d9ecb4f3b9_01.avif" alt="" />
+  <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c50de0cca26456f73d0_02.avif" alt="" />
+  <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c51fe74fff065641ef3_03.avif" alt="" />
+  <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c502151a3464e282feb_04.avif" alt="" />
+  <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c5099c8b478e9732b9d_05.avif" alt="" />
+  <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c509710055dd7251e0a_06.avif" alt="" />
+</div>
+
+<div className="Tradingdeine w-full h-auto mt-[5rem] px-4 mb-[4rem]">
+  <h1 className="font-bold text-[30px] sm:text-[45px] tracking-[.4px] leading-[1.2] text-center">
+    Wie ergologreiches Trading deine <br />
+    <span className="block text-[#0cdc6a]">Zuknfit Verandern kann</span>
+  </h1>
+  <div className="desc flex justify-center mt-4 text-[#728291] text-[14px] sm:text-[16px]">
+    mit nur 30-50 Minuten Zitaufawnd am Tag.
+  </div>
+
+  <div className="flex flex-wrap justify-center gap-4 w-full h-auto mt-[3rem]">
+    {/* Card 1 */}
+    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd106312edd26ca53b1b77_Untitled-3%201.avif" alt="" />
+      <div className="text-center sm:text-left">
+        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Komplette finanzielle Unabhängigkeit</div>
+        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Bau dir ein zweites finanzielles Standbein auf, mache dich langfristig unabhängig von deinem Arbeitgeber und sichere dir einen höheren Lebensstandard.</div>
       </div>
+    </div>
 
-      <div className="flex justify-between items-center m-auto w-[70%] mt-[5rem] ">
-        <img className="h-32px w-1/6" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c5162bf58d9ecb4f3b9_01.avif" alt="" />
-        <img className="h-32px w-1/6" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c50de0cca26456f73d0_02.avif" alt="" />
-        <img className="h-32px w-1/6" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c51fe74fff065641ef3_03.avif" alt="" />
-        <img className="h-32px w-1/6" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c502151a3464e282feb_04.avif" alt="" />
-        <img className="h-32px w-1/6" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c5099c8b478e9732b9d_05.avif" alt="" />
-        <img className="h-32px w-1/6" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c509710055dd7251e0a_06.avif" alt="" />
+    {/* Card 2 */}
+    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd1063d7e938d9f5c79317_Untitled-3%201-1.avif" alt="" />
+      <div className="text-center sm:text-left">
+        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Sprenge deine Einkommensgrenzen</div>
+        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Als Trader sind deinem Einkommen keine künstlichen Grenzen mehr gesetzt. Mit dieser Fähigkeit hast du die volle Kontrolle über dein Einkommen.</div>
       </div>
+    </div>
 
+    {/* Card 3 */}
+    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10635b19cc084b2099c2_Untitled-3%201-2.avif" alt="" />
+      <div className="text-center sm:text-left">
+        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Lebe nach deinen Regeln</div>
+        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Genieße ein Leben ohne Einschränkungen. Du tradest wo und wann du willst - dabei ist es egal, ob du Zuhause bist oder die Welt bereisen möchtest.</div>
+      </div>
+    </div>
 
+    {/* Card 4 */}
+    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10638eee05feffd9aaa0_Untitled-3%201-3.avif" alt="" />
+      <div className="text-center sm:text-left">
+        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Verdiene in jeder Marktlage</div>
+        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Daytrader profitieren sowohl von steigenden als auch von fallenden Kursen. Mit unserer TF-Methode kannst du markunabhängig Gewinne erzielen.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div className="part3 w-full h-auto bg-[#041212] pt-[3rem] text-[#fff] flex flex-col items-center rounded-2xl">
 
-            <div className="Tradingdeine w-full h-auto mt-[5rem]">
-              <h1 className="font-bold text-[45px] tracking-[.4px] leading-[1.2] text-center">
-                Wie ergologreiches Trading deine <br />
-                <span className="block text-[#0cdc6a]">Zuknfit Verandern kann</span>
-              </h1>
-              <div className="desc flex justify-center mt-4 text-[#728291] text-[16px]">
-                mit nur 30 50 Minuten Zitaufawnd am Tag.
-              </div>
+<div className="text-[12px] flex justify-center font-bold bg-[#fefefe0f] w-[10rem] h-auto py-2 rounded-2xl px-3 items-center uppercase mt-4">
+    <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
+    Dein Lehrplan
+</div>
 
+<div className="title flex justify-center mt-10 text-[48px] font-bold leading-[1.2] tracking-[.4px]">
+    <h1>In nur 7 Tagen sicher traden</h1>
+</div>
 
-              <div className="flex flex-wrap justify-center gap-4 w-full h-auto mt-[3rem]">
-                  <div className="w-[39rem] h-auto flex items-center bg-[#fff] p-[30px] rounded-[10px]">
-                    <img className='h-[129px] w-[120px]' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd106312edd26ca53b1b77_Untitled-3%201.avif" alt="" />
-                    <div className="ml-4"> 
-                      <div className="font-bold text-[24px] leading-[1.2]">Komplette finanzielle Unabhängigkeit                      </div>
-                      <div className='text-[16px] text-[#728291] leading-[1.5] mt-2'>Bau dir ein zweites finanzielles Standbein auf, mache dich langfristig unabhängig von deinem Arbeitgeber und sichere dir einen höheren Lebensstandard.</div>
-                    </div>
-                  </div>
-                  
-                  <div className="w-[39rem] h-auto flex items-center bg-[#fff] p-[30px] rounded-[10px]">
-                    <img className='h-[129px] w-[120px]' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd1063d7e938d9f5c79317_Untitled-3%201-1.avif" alt="" />
-                    <div className="ml-4">
-                      <div className="font-bold text-[24px] leading-[1.2]">Sprenge deine Einkommensgrenzen                      </div>
-                      <div className='text-[16px] text-[#728291] leading-[1.5] mt-2'>Als Trader sind deinem Einkommen keine künstlichen Grenzen mehr gesetzt. Mit dieser Fähigkeit hast du die volle Kontrolle über dein Einkommen.</div>
-                    </div>
-                  </div>
-                  
-                  <div className="w-[39rem] h-auto flex items-center bg-[#fff] p-[30px] rounded-[10px]">
-                    <img className='h-[129px] w-[120px]' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10635b19cc084b2099c2_Untitled-3%201-2.avif" alt="" />
-                    <div className="ml-4">
-                      <div className="font-bold text-[24px] leading-[1.2]">Lebe nach deinen Regeln                      </div>
-                      <div className='text-[16px] text-[#728291] leading-[1.5] mt-2'>Genieße ein Leben ohne Einschränkungen. Du tradest wo und wann du willst - dabei ist es egal, ob du Zuhause bist oder die Welt bereisen möchtest.</div>
-                    </div>
-                  </div>
-                  
-                  <div className="w-[39rem] h-auto flex items-center bg-[#fff] p-4 rounded-[10px]">
-                    <img className='h-[129px] w-[120px]' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10638eee05feffd9aaa0_Untitled-3%201-3.avif" alt="" />
-                    <div className="ml-4">
-                      <div className="font-bold text-[24px] leading-[1.2]">Verdiene in jeder Marktlage                      </div>
-                      <div className='text-[16px] text-[#728291] leading-[1.5] mt-2'>Daytrader profitieren sowohl von steigenden als auch von fallenden Kursen. Mit unserer TF-Methode kannst du markunabhängig Gewinne erzielen.</div>
-                    </div>
-                  </div>
-                </div>
-
-
-            </div>
-
-            <div className="part3 w-full h-auto bg-[#041212] pt-[3rem] text-[#fff] flex flex-col items-center rounded-2xl"> {/* Ndryshuar në flex-col për të rreshtuar elementët vertikalisht */}
-  
-            <div className="text-[12px] flex justify-center font-bold bg-[#fefefe0f] w-[10rem] h-auto py-2 rounded-2xl px-3 items-center uppercase mt-4">
-              <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
-              Dein Lehrplan
-            </div>
-
-            <div className="title flex justify-center mt-10 text-[48px] font-bold leading-[1.2] tracking-[.4px]"> 
-              <h1>In nur 7 Tagen sicher traden</h1>
-            </div>
-
-
-            <div className="columns mt-[3.5rem]">
-          <div className="flex justify-center gap-5">
-          <div className="w-[26rem] h-auto p-4 bg-[#fefefe08] rounded-[10px] " style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-          <img className='h-[15rem] w-full mb-2' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd16540ad3c85ea696aa79_Group%202087326428.avif" alt="" />
+<div className="columns mt-[3.5rem] flex flex-col sm:flex-row">
+    <div className="flex justify-center gap-5 flex-wrap">
+        <div className="w-full sm:w-[26rem] h-auto p-4 bg-[#fefefe08] rounded-[10px]" style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+            <img className='h-[15rem] w-full mb-2' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd16540ad3c85ea696aa79_Group%202087326428.avif" alt="" />
             <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
-            Tag 1
-
+                Tag 1
             </div>
-              <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
+            <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
                 Die TF Methode
-              <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
-              Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+                <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
+                    Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+                </div>
+            </div>
+        </div>
 
-              </div>
-              </div>
-              </div>
-
-              <div className="w-[26rem] h-auto p-4 bg-[#fefefe08] rounded-[10px] " style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-              <img className='h-[15rem] w-full mb-2' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd19add8d6303b525ea374_Group%202087326437.avif" alt="" />
-              <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
-              Tag 2
-
-              </div>
-              <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
+        <div className="w-full sm:w-[26rem] h-auto p-4 bg-[#fefefe08] rounded-[10px]" style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+            <img className='h-[15rem] w-full mb-2' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd19add8d6303b525ea374_Group%202087326437.avif" alt="" />
+            <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
+                Tag 2
+            </div>
+            <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
                 Die TF Methode
-              </div>
-              <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
-              Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+            </div>
+            <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
+                Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+            </div>
+        </div>
 
-              </div>
-              </div>
-              <div className="w-[26rem] h-auto p-4 bg-[#fefefe08] rounded-[10px] " style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-              <img className='h-[15rem] w-full mb-2' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d70e3588f256762cf127db_Group%202087326472.png" alt="" />
-              <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
-              Tag 3
-
-              </div>
-              <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
+        <div className="w-full sm:w-[26rem] h-auto p-4 bg-[#fefefe08] rounded-[10px]" style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+            <img className='h-[15rem] w-full mb-2' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d70e3588f256762cf127db_Group%202087326472.png" alt="" />
+            <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
+                Tag 3
+            </div>
+            <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
                 Die TF Methode
-              </div>
-              <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
-              Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+            </div>
+            <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
+                Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+            </div>
+        </div>
+    </div>
+</div>
 
-              </div>
-              </div>
-
-              </div>  
-
-              </div>
-              {!showColumns && (
-              <div className="w-full h-auto mt-10 flex justify-center">
+{!showColumns && (
+    <div className="w-full h-auto mt-10 flex justify-center mb-[4rem]">
         <div
-          onClick={handleToggleColumns} // Step 3: Add onClick to toggle the visibility
-          className="button flex items-center justify-between w-[20rem] bg-[#69bc8f26] font-[600] rounded-[10px] p-[20px] m-auto cursor-pointer" 
-          style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}
+            onClick={handleToggleColumns}
+            className="button flex items-center justify-between w-[20rem] bg-[#69bc8f26] font-[600] rounded-[10px] p-[20px] m-auto cursor-pointer"
+            style={{ border: '1px solid rgba(255, 255, 255, 0.05)' }}
         >
-          <p className="mr-2">Mehr anzeigen</p>
-          <div className="icon-create w-[24px] h-[24px]">
-            <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc762139d5d2dbcb2c74c_Add%20box.png" alt="" />
+            <p className="mr-2">Mehr anzeigen</p>
+            <div className="icon-create w-[24px] h-[24px]">
+                <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc762139d5d2dbcb2c74c_Add%20box.png" alt="" />
+            </div>
+        </div>
+    </div>
+)}
+{showColumns && (
+  <>
+    <div className="column-add mt-5">
+      <div className="flex flex-wrap justify-center gap-3">
+        {/* Column 1 */}
+        <div className="column w-full md:w-[40rem] h-auto p-[20px] bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
+          <img
+            className="w-full h-auto object-cover"
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d70f4263b1d68278be1fe5_Group%202087326667.png"
+            alt="" />
+          <div className="on_the_trader relative z-[20]">
+            <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
+              Tag 4
+            </div>
+            <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
+              Markstrukturen
+            </div>
+            <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
+              Erlerne die Grundlagen der technischen Analyse sowie das Lesen der Märkte, um die Entwicklung einer Aktie zu verstehen.
+            </div>
           </div>
+          <div className="trader_block-overlay" style={{
+            backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
+            height: '243px',
+            position: 'absolute',
+            inset: '0',
+            width: '100%',
+            top: '40%',
+            zIndex: 10,
+          }}></div>
+        </div>
+
+        {/* Column 2 */}
+        <div className="column w-full md:w-[40rem] h-auto p-[15px] bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
+          <img
+            className="imgtog5 w-auto h-auto"
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdcaea1657996322be914b_U.avif"
+            alt="" />
+          <div className="on_the_trader relative z-[20] mt-[-8.7rem]">
+            <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
+              Tag 5
+            </div>
+            <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
+              Die TF Methode
+            </div>
+            <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
+              Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+            </div>
+          </div>
+          <div className="trader_block-overlay" style={{
+            backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
+            height: '243px',
+            position: 'absolute',
+            inset: '0',
+            width: '100%',
+            top: '40%',
+            zIndex: 10,
+          }}></div>
+        </div>
+
+        {/* Column 3 */}
+        <div className="column w-full md:w-[40rem] h-auto p-[15px] bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
+          <img
+            className="imgtog5 w-auto h-auto"
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdcaea186d4f1e46c729f4_Frame%202087326564.avif"
+            alt="" />
+          <div className="on_the_trader relative z-[20] mt-[-8.7rem]">
+            <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
+              Tag 6
+            </div>
+            <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
+              Die TF Methode
+            </div>
+            <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
+              Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+            </div>
+          </div>
+          <div className="trader_block-overlay" style={{
+            backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
+            height: '243px',
+            position: 'absolute',
+            inset: '0',
+            width: '100%',
+            top: '40%',
+            zIndex: 10,
+          }}></div>
+        </div>
+
+        {/* Column 4 */}
+        <div className="column w-full md:w-[40rem] h-auto p-[15px] bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
+          <img
+            className="imgtog5 w-auto h-auto"
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdcaea186d4f1e46c729f4_Frame%202087326564.avif"
+            alt="" />
+          <div className="on_the_trader relative z-[20] mt-[-3rem]">
+            <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
+              Tag 7
+            </div>
+            <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
+              Die TF Methode
+            </div>
+            <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
+              Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
+            </div>
+          </div>
+          <div className="trader_block-overlay" style={{
+            backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
+            height: '200px',
+            position: 'absolute',
+            inset: '0',
+            width: '100%',
+            top: '50%',
+            zIndex: 10,
+          }}></div>
         </div>
       </div>
-      )}
+    </div>
 
-      {showColumns && (
+    <div className="button bg-[#13f97b] mt-[2rem] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
+  <div className="btn-text w-full text-center z-10">
+    Jetzt kostenlosen Zugang sichern
+  </div>
 
-          <><div className="column-add mt-5">
-              <div className="flex flex-wrap justify-center gap-3">
-                <div className="w-[40rem] h-auto p-[20px] bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
-                  <img
-                    className="w-full h-auto object-cover"
-                    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d70f4263b1d68278be1fe5_Group%202087326667.png"
-                    alt="" />
-                  <div className="on_the_trader relative z-[20]">
-                    <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
-                      Tag 4
-                    </div>
-                    <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
-                      Markstrukturen
+  <div className="btn-arrow-icon z-10">
+    <img 
+      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg" 
+      alt="Arrow"
+    />
+  </div>
 
-                    </div>
-                    <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
-                      Erlerne die Grundlagen der technischen Analyse sowie das Lesen der Märkte, um die Entwicklung einer Aktie zu verstehen.
-                    </div>
-                  </div>
+  <div className="interaction absolute top-0 left-0 h-full w-full animate-interaction pointer-events-none">
+    <img 
+      className="h-full w-full object-cover"
+      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
+      alt="interaction"
+      loading="lazy"
+      sizes="(max-width: 100px), 200.998046875px"
+      srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%25203404-p-500.png 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp 654w"
+    />
+  </div>
+</div>
+<div className="flex items-center justify-center mt-[2rem]  mb-[5rem] z-20 sm:mt-[1rem]">
+    <img
+      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+      alt="Avatar"
+      width={114}
+      height={30.19}
+    />
+    <div className="text-people ml-4 text-white text-[12px] sm:text-[10px]">
+      Beretis <strong>2.145+</strong> Mal bestellt
+    </div>
+  </div>
 
-                  <div className="trader_block-overlay" style={{
-                    backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
-                    height: '243px',
-                    position: 'absolute',
-                    inset: '0',
-                    width: '100%',
-                    top: '40%',
-                    zIndex: 10,
-                  }}>
-                  </div>
-                </div>
-
-                <div className="w-[40rem] h-auto p-[15px]  bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
-                  <img
-                    className="imgtog5 w-auto h-auto"
-                    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdcaea1657996322be914b_U.avif"
-                    alt="" />
-                  <div className="on_the_trader relative z-[20] mt-[-8.7rem]">
-                    <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
-                      Tag 5
-                    </div>
-                    <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
-                      Die TF Methode
-                    </div>
-                    <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
-                      Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
-                    </div>
-                  </div>
-
-                  <div className="trader_block-overlay" style={{
-                    backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
-                    height: '243px',
-                    position: 'absolute',
-                    inset: '0',
-                    width: '100%',
-                    top: '40%',
-                    zIndex: 10,
-                  }}>
-                  </div>
-                </div>
-
-
-
-
-                <div className="w-[40rem] h-auto p-[15px]  bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
-                  <img
-                    className="imgtog5 w-auto h-auto"
-                    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d70fe18435ec9fd92ece3a_Group%202087326431.png"
-                    alt="" />
-                  <div className="on_the_trader relative z-[20] mt-[-8.7rem]">
-                    <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
-                      Tag 6
-                    </div>
-                    <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
-                      Die TF Methode
-                    </div>
-                    <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
-                      Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
-                    </div>
-                  </div>
-
-                  <div className="trader_block-overlay" style={{
-                    backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
-                    height: '243px',
-                    position: 'absolute',
-                    inset: '0',
-                    width: '100%',
-                    top: '40%',
-                    zIndex: 10,
-                  }}>
-                  </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-                <div className="w-[40rem] h-auto p-[15px]  bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
-                  <img
-                    className="imgtog5 w-auto h-auto"
-                    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdcaea186d4f1e46c729f4_Frame%202087326564.avif"
-                    alt="" />
-                  <div className="on_the_trader relative z-[20] mt-[-3rem]">
-                    <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
-                      Tag 7
-                    </div>
-                    <div className="h3 text-[#fff] tracking-[0] font-[500] leading-[1.2] text-[24px] mt-3">
-                      Die TF Methode
-                    </div>
-                    <div className="description text-[#788886] tracking-[-.28px] text-[14px] leading-[1.5] mt-2">
-                      Du wirst lernen, wie du in nur 6 Schritten mit der TF Methode innerhalb der nächsten 7 Tage deinen ersten profitablen Trade setzen kannst.
-                    </div>
-                  </div>
-
-                  <div className="trader_block-overlay" style={{
-                    backgroundImage: 'linear-gradient(#0c191900, #0c1919  30%)',
-                    height: '200px',
-                    position: 'absolute',
-                    inset: '0',
-                    width: '100%',
-                    top: '50%',
-                    zIndex: 10,
-                  }}>
-                  </div>
-                </div>
-
-
-
-
-
-
-
-              </div>
-            </div><div className="bg-[#13f97b] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 mt-5 relative">
-                <div className="btn-text w-full text-center">
-                  Jetzt kostenlosen Zugang sichern
-                </div>
-
-                <div className="btn-arrow-icon">
-                  <img
-                    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg"
-                    alt="Arrow" />
-                </div>
-
-                <div className="interaction absolute top-0 left-0 h-full w-[358px] animate-interaction overflow-hidden">
-                  <img className="h-full w-full object-cover"
-                    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webps"
-                    alt="interaction"
-                    loading="lazy"
-                    sizes="(max-width: 100px), 200.998046875px"
-                    srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%25203404-p-500.png 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp 654w" />
-                </div>
-              </div><div className="flex items-center justify-center mt-[2rem] z-20 mb-[5rem]">
-                <img
-                  src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
-                  alt="Avatar"
-                  width={114}
-                  height={30.19} />
-                <div className="text-people ml-4 text-[#fff] text-[12px]">
-                  Beretis <strong>2.145+</strong> Mal bestellt
-                </div>
-              </div></>
-
-    )}
+  </>
+)}
 
 
 </div>
@@ -579,16 +580,16 @@ function Home() {
   <div className="relative w-screen flex flex-col items-center z-20 mt-10">
     <div className="text-[12px] text-black font-bold bg-white py-2 rounded-3xl px-4 flex items-center uppercase mt-4">
       <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
-      Erkennst du dich hier wieder?
+      Erkennstt du dich hier wieder?
     </div>
 
-    <div className="text-center text-black text-[40px] tracking-[.7px] font-bold leading-[1.1] mt-6">
+    <div className="title1 text-center text-black text-[40px] tracking-[.7px] font-bold leading-[1.1] mt-6">
       Für wen dieser Kurs ist
     </div>
 
     <div className="flex flex-wrap justify-center items-start w-full h-auto mt-10 gap-6">
       <div className="w-[32rem] bg-[#fff] p-3 rounded-[20px]">
-        <div className="button bg-[#0cdc6a] text-[#ffffff] font-bold pt-[15px] pb-[15px] text-[20px] items-center text-center rounded-[10px]">
+        <div className="button1 bg-[#0cdc6a] text-[#ffffff] font-bold pt-[15px] pb-[15px] text-[20px] items-center text-center rounded-[10px]">
           100% richtig:
         </div>
         <ul className="list-inside mt-4 list-none m-10 text-[16px] text-[#728291]">
@@ -646,7 +647,7 @@ function Home() {
       </div>
       
       <div className="w-[32rem] bg-[#fff] p-3 rounded-[20px]">
-        <div className="button bg-[#ff0000] text-[#ffffff] font-bold pt-[15px] pb-[15px] text-[20px] items-center text-center rounded-[10px] ">
+        <div className="button1 bg-[#ff0000] text-[#ffffff] font-bold pt-[15px] pb-[15px] text-[20px] items-center text-center rounded-[10px] ">
         Definitiv nicht:
         </div>
         <ul className="list-inside mt-4 list-none m-10 text-[16px] text-[#728291]">
@@ -713,11 +714,131 @@ function Home() {
 
 
 
-<div className="part5 w-full h-auto bg-[#041212] rounded-[20px]">
+<div className="part5 w-full h-auto bg-[#041212] rounded-[20px] flex flex-col lg:flex-row justify-center items-center mt-10 mb-10 px-4 lg:px-0">
+  
+  <div className="left-img w-full lg:w-[34rem] h-auto mt-4 lg:mt-8 mb-4 lg:mb-5">
+    <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd24c802a20ec487fa78e0_image%201376-p-1080.webp" alt="dada" loading='lazy' className="w-full lg:w-auto" />
+  </div>
 
-<div className="left-img">
-  <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd24c802a20ec487fa78e0_image%201376-p-1080.webp" alt="" />
+  <div className="text text-[#ffff] mt-4 lg:mt-5 lg:ml-[7rem]">
+    <h1 className='text-[24px] lg:text-[40px] font-bold leading-[1.2] mb-5 text-center lg:text-left'>
+      Der mit Abstand einfachste <br /> 
+      Weg, um mit geringem <br /> 
+      <span className='text-[#0cdc6a] text-[24px] lg:text-[40px]'>
+        Zeitaufwand ins Trading <br />einzusteigen.
+      </span>
+    </h1>
+
+    <div className="descript text-[#788886] text-[14px] lg:text-[16px] tracking-[-.32px] leading-[1.5] text-center lg:text-left">
+      In dieser 7-tägigen Ausbildung lernst du die Grundlagen des Daytradings in leicht <br className="hidden lg:block"/> 
+      verständlicher und unterhaltsamer Form und bekommst zudem noch klare Anleitungen und <br className="hidden lg:block"/>  
+      Strategien, die du danach eigenständig und sicher umsetzen kannst.
+      <br /><br />
+      In über 15 Jahren als Trader habe ich vieles gelernt, aber auch einige Fehler gemacht. <br className="hidden lg:block"/>
+      Ich weiß, wie komplex Trading für einen Anfänger ist. Um dir den Einstieg so einfach wie nur <br className="hidden lg:block"/>  
+      möglich zu machen, habe ich dieses kostenlose Online-Training erstellt. So eine Ausbildung <br className="hidden lg:block"/>  
+      hätte ich mir damals selbst gewünscht.
+      <br /><br />
+      Viel Spaß beim Erlernen dieser einzigartigen Fähigkeit!
+      <br />
+      <strong className='text-[#fff]'>Dein Tim</strong>
+      <br /><br />
+      <img className='w-[100px] lg:w-[154px] mx-auto lg:mx-0' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd24f909b20f8f904dba08_tim%20signature.avif" alt="Tim Signature" />
+    </div>
+  </div>
 </div>
+
+<div className="part6 py-10 px-4 lg:py-16">
+  <div className="part6-1 flex flex-col lg:flex-row justify-between items-start max-w-7xl mx-auto">
+  <h1 className="hidden lg:block text-[40px] font-bold text-black leading-[1.2] mb-6 lg:mb-0">
+  Häufig gestellte <br /> Fragen
+</h1>
+    {/* <h1 className=" hidden text-2xl lg:text-[40px] flex justify-center font-bold text-black leading-[1.2] mb-6 lg:mb-0">
+  Häufig gestellte Fragen
+</h1> */}
+    {/* FAQ Section */}
+    <div className="columns-click w-full lg:w-[38rem]">
+      {faqs.map((faq, index) => (
+        <div key={index} className="bg-white mb-4 p-4 rounded-lg shadow-lg cursor-pointer" onClick={() => toggleAccordion(index)}>
+          <div className="flex justify-between items-center">
+            <h2 className="text-sm lg:text-[15px] tracking-[.18px] p-2 text-black font-[600]">{faq.question}</h2>
+            <span className="text-lg lg:text-2xl font-bold">{activeIndex === index ? '-' : '+'}</span>
+          </div>
+          {activeIndex === index && (
+            <div className="mt-2 text-[#0006] text-xs lg:text-[14px] p-2 leading-[160%]">
+              {faq.answer}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+
+    <div className="part7 bg-red-700 flex justify-center items-center w-full py-16">
+  <div className="part7-1 flex items-start justify-between max-w-7xl w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] pl-[80px] pr-[80px]">
+
+    {/* Left Section */}
+    <div className="left mt-[7rem] text-center md:text-left">
+
+      <h1 className="text-[44px] font-[600] leading-[1]">
+        Nur noch <span className="text-[#0cdc6a]">1 Schritt</span>...
+      </h1>
+
+      <div className="description text-[16px] text-[#728291] leading-[1.5] mt-3">
+        Verwandle dich vom kompletten Anfänger zum fortgeschrittenen <br />
+        Trader in nur 7 Tagen. Warte nicht länger und sichere dir jetzt den <br />
+        Zugang zu dieser einzigartigen und für dich kostenlosen Online- <br />
+        Ausbildung.
+      </div>
+
+      {/* Button Section */}
+      <div className="bg-[#13f97b] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 mt-5 relative mx-auto md:mx-0">
+        <div className="btn-text w-full text-center">
+          Jetzt kostenlosen Zugang sichern
+        </div>
+
+        <div className="btn-arrow-icon">
+          <img
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg"
+            alt="Arrow"
+          />
+        </div>
+
+        <div className="interaction absolute top-0 left-0 h-full w-[388px] animate-interaction">
+          <img className="h-full w-full object-cover"
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
+            alt="interaction"
+            loading="lazy"
+            sizes="(max-width: 100px), 200.998046875px"
+            srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%25203404-p-500.png 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp 654w"
+          />
+        </div>
+      </div>
+
+      {/* Avatar Section */}
+      <div className="flex items-center justify-start mt-[2rem] z-20">
+        <img
+          src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+          alt="Avatar"
+          width={114}
+          height={30.19}
+        />
+        <div className="text-people text-start ml-4 text-black text-[12px]">
+          Beretis <strong>2.145+</strong> Mal bestellt
+        </div>
+      </div>
+
+    </div>
+
+    {/* Right Section */}
+    <div className="right mt-[4rem]">
+      <img className="w-[518px] h-auto mx-auto md:mx-0" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385.avif" alt="" />
+    </div>
+
+  </div>
 </div>
 
 
@@ -732,10 +853,10 @@ function Home() {
       <style jsx>{`
         @keyframes moveInteraction {
           0% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
           100% {
-            transform: translateX(40%);
+            transform: translateX(100%);
           }
         }
         .animate-interaction {

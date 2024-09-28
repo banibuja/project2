@@ -337,7 +337,7 @@ function Home() {
         <div className="column w-full md:w-[40rem] h-auto p-[15px] bg-[#fefefe08] mb-3 relative rounded-[10px]" style={{ border: '1px solid #ffffff0d' }}>
           <img
             className="imgtog5 w-auto h-auto"
-            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdcaea186d4f1e46c729f4_Frame%202087326564.avif"
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d70fe18435ec9fd92ece3a_Group%202087326431.png"
             alt="" />
           <div className="on_the_trader relative z-[20] mt-[-8.7rem]">
             <div className="tag text-[12px] text-[#041212] uppercase bg-[#14f97b] font-bold leading-[1] p-[10px] w-[3.5rem] rounded-2xl">
@@ -775,76 +775,131 @@ function Home() {
   </div>
 </div>
 
+ 
 
-
-    <div className="part7 bg-red-700 flex justify-center items-center w-full py-16">
-  <div className="part7-1 flex items-start justify-between max-w-7xl w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] pl-[80px] pr-[80px]">
+<div className="part7 flex justify-center items-center w-full py-16">
+  <div className="section3 part7-1 mb-[-21rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
+  <div className="footer_blur"> </div>
 
     {/* Left Section */}
-    <div className="left mt-[7rem] text-center md:text-left">
-
-      <h1 className="text-[44px] font-[600] leading-[1]">
+    <div className="left mt-[2rem] md:mt-[7rem] text-center md:text-left w-full md:w-auto">
+      <h1 className="text-[28px] md:text-[44px] font-[600] leading-tight">
         Nur noch <span className="text-[#0cdc6a]">1 Schritt</span>...
       </h1>
 
-      <div className="description text-[16px] text-[#728291] leading-[1.5] mt-3">
-        Verwandle dich vom kompletten Anfänger zum fortgeschrittenen <br />
-        Trader in nur 7 Tagen. Warte nicht länger und sichere dir jetzt den <br />
-        Zugang zu dieser einzigartigen und für dich kostenlosen Online- <br />
+      <div className="description text-[14px] md:text-[16px] text-[#728291] leading-relaxed mt-3">
+        Verwandle dich vom kompletten Anfänger zum fortgeschrittenen <br className="hidden md:inline" />
+        Trader in nur 7 Tagen. Warte nicht länger und sichere dir jetzt den <br className="hidden md:inline" />
+        Zugang zu dieser einzigartigen und für dich kostenlosen Online- <br className="hidden md:inline" />
         Ausbildung.
       </div>
 
       {/* Button Section */}
-      <div className="bg-[#13f97b] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 mt-5 relative mx-auto md:mx-0">
-        <div className="btn-text w-full text-center">
+      <div className="button bg-[#13f97b] mt-[2rem] h-[60px] md:h-20 w-full md:w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[14px] md:text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
+        <div className="btn-text w-full text-center z-10">
           Jetzt kostenlosen Zugang sichern
         </div>
 
-        <div className="btn-arrow-icon">
-          <img
-            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg"
+        <div className="btn-arrow-icon z-10">
+          <img 
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg" 
             alt="Arrow"
           />
         </div>
 
-        <div className="interaction absolute top-0 left-0 h-full w-[388px] animate-interaction">
-          <img className="h-full w-full object-cover"
+        <div className="interaction absolute top-0 left-0 h-full w-full animate-interaction pointer-events-none">
+          <img 
+            className="h-full w-full object-cover"
             src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
             alt="interaction"
             loading="lazy"
-            sizes="(max-width: 100px), 200.998046875px"
-            srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%25203404-p-500.png 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp 654w"
           />
         </div>
       </div>
 
-      {/* Avatar Section */}
-      <div className="flex items-center justify-start mt-[2rem] z-20">
+      <div className="flex items-center mt-[2rem] sm:mt-[1rem] mb-[2rem] z-20">
         <img
           src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
           alt="Avatar"
           width={114}
           height={30.19}
         />
-        <div className="text-people text-start ml-4 text-black text-[12px]">
+        <div className="text-people ml-4 text-black text-[10px] md:text-[12px]">
           Beretis <strong>2.145+</strong> Mal bestellt
         </div>
       </div>
-
     </div>
 
     {/* Right Section */}
-    <div className="right mt-[4rem]">
-      <img className="w-[518px] h-auto mx-auto md:mx-0" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385.avif" alt="" />
+    <div className="right mt-[2rem] md:mt-[4rem] w-full md:w-auto">
+      <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385.avif" alt="" />
     </div>
-
   </div>
 </div>
 
+<div className="light-background-footer bg-[#04120b]">
+  <div className="part7-1 max-w-full md:max-w-8xl w-full md:w-[85rem] rounded-[20px] bg-[#04120b] flex flex-col mx-auto pb-[80px] py-[30px] px-[20px] md:px-[80px]">
 
+    {/* Footer Top Section */}
+    <div className="content mt-[10rem] md:mt-[20rem] flex flex-col md:flex-row items-center justify-between border-b border-solid border-[#ffffff29]">
 
+      {/* Left Images */}
+      <div className="left-images mb-[3rem]">
+        <img
+          src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3eca_logo.webp"
+          alt="Logo"
+          width={38}
+          height={32}
+        />
+      </div>
 
+      {/* Right List */}
+      <div className="list-right flex items-center">
+        <ul className="list-none flex space-x-4 md:space-x-8 text-[#fff] mb-[3rem] text-[12px] md:text-[14px]">
+          <li>Trader Training</li>
+          <li>Karriere</li>
+          <li>Kennenlerngespräch</li>
+          <li>Kundenmeinungen</li>
+        </ul>
+      </div>
+    </div>
 
+    {/* Footer Bottom Section */}
+    <div className="content flex flex-col md:flex-row items-center justify-between border-b border-solid border-[#ffffff29] py-4">
+
+      {/* Left List */}
+      <div className="text-left">
+        <ul className="list-none flex space-x-4 md:space-x-8 text-[#fff] text-[12px] md:text-[14px] mt-[2.5rem] mb-[2.5rem] font-[500] tracking-[.175px]">
+          <li>Datenschutz</li>
+          <li>Impressum</li>
+          <li>Risikohnwis</li>
+        </ul>
+      </div>
+
+      {/* Right Copyright Text */}
+      <div className="text text-[#ffffff3d] text-[10px] md:text-[12px] mt-[2.5rem] mb-[2.5rem]">
+        © 2023 TradingFreaks® All rights reserved
+      </div>
+    </div>
+
+    <div className="content flex flex-col py-4 mt-[3rem] md:mt-[5rem]">
+
+      <div className="title-footer mb-[2rem] text-[#fff] text-[18px] md:text-[24px] font-[600] leading-[100%]">
+        Risikohinweis
+      </div>
+
+      <div className="description-bottom text-[#ffffff3d] w-full md:w-[44rem] text-[12px] md:text-[14px]">
+      Der Handel mit Hebelprodukten (z.B. CFD´s und Forex Trades) oder anderen Finanzinstrumenten ist mit einem enormen Risiko verbunden und nicht für jeden geeignet. Es besteht die Möglichkeit, dass Sie einen Totalverlust erleiden oder sogar Verluste erleiden, die Ihre Investitionen übersteigen. Bevor Sie mit Hebelprodukten oder anderen Finanzinstrumenten handeln, sollten Sie sicherstellen, dass Sie alle damit verbunden Risiken verstanden haben. Im Übrigen verweisen wir auf unsere Risikohinweise auf: https://tradingfreaks.com/risikohinweis/. Es wird ausdrücklich klargestellt, dass wir (TF Daytrading GmbH/ www.tradingfreaks.com/) keine Anlageberatung anbieten und durchführen und insbesondere auch keinerlei konkrete Empfehlungen zu einem Wertpapier, Finanzprodukt oder -Instrument abgeben. Die Erwähnung bestimmter Wertpapiere oder Anlageprodukte stellen ausdrücklich keine Empfehlung zum Kaufen oder Verkaufen oder Halten dar. Sie handeln bzw. traden auf eigenes Risiko. Jegliche Haftung wird ausgeschlossen.
+<br />
+<br />
+        CFDs sind komplexe Instrumente und bergen aufgrund der Hebelwirkung ein hohes Risiko, schnell Geld zu verlieren. Die große Mehrheit der Konten von Kleinanlegern verliert beim Handel mit CFDs Geld. Sie sollten abwägen, ob Sie die Funktionsweise von CFDs verstehen und ob Sie es sich leisten können, das hohe Risiko einzugehen, ihr Geld zu verlieren.
+      <br />
+      <br />
+      Kontaktieren Sie uns: info@tradingfreaks.com      </div>
+
+    </div>
+  </div>
+</div>
 
 
 

@@ -127,16 +127,25 @@ body {
         font-size: 28px;
 
     }
-    .button
-    {
-
-        .title3{
-            
-        }
-
+    .section3{
+      margin-bottom: -10rem;
+      padding-bottom: 10px;
     }
 
 
+  }
+
+
+  .footer_blur {
+    filter: blur(200px);
+    background-image: linear-gradient(90deg, #13f97b, #00d560);
+    border-radius: 100%;
+    width: 550px;
+    height: 124px;
+    position: absolute;
+    bottom: 55rem;
+    left: 50%;
+    transform: translate(-50%);
   }
 
 

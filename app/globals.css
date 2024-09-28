@@ -131,6 +131,13 @@ body {
       margin-bottom: -10rem;
       padding-bottom: 10px;
     }
+    .max-w-md {
+      max-width: none;
+    }
+    .form{
+      text-align: none;
+    }
+  
 
 
   }
@@ -147,6 +154,5 @@ body {
     left: 50%;
     transform: translate(-50%);
   }
-
 
   

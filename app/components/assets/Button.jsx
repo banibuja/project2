@@ -20,7 +20,7 @@ const Button = () => {
 
   return (
     <>
-      <div className="relative z-[40]">
+      <div className="relative">
         <div
           onClick={handleOpenModal}
           className="button bg-[#13f97b] mt-[2rem] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden z-50"

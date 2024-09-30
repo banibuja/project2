@@ -48,7 +48,7 @@ function Home() {
     setShowColumns(prevState => !prevState);
   };
   return (
-    <main className="relative" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <main className="relative " style={{ fontFamily: "'Outfit', sans-serif" }}>
         <div className="light-bg">
             
      <header className="w-full h-[3.3rem] py-1 bg-[#fff] mx-auto">
@@ -76,7 +76,7 @@ function Home() {
         </nav>
       </header>
 
-      <div className=" w-full relative  flex flex-col items-center justify-center z-20 lg:mt-[3rem] mt-[2rem] sm:mt-5">
+      <div className=" w-full relative z-[1000]  flex flex-col items-center justify-center lg:mt-[3rem] mt-[2rem] sm:mt-5">
   <div className="text-[12px]  text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-2 flex ms-center uppercase mt-[4rem] sm:mt-2">
     <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
     Kostenloser Trading-Kurs
@@ -817,7 +817,11 @@ function Home() {
     {/* Right Section */}
     <div className="right mt-[2rem] md:mt-[4rem] w-full md:w-auto">
       <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385.avif" alt="" />
+      {/* <img className='w-[246px] ' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" alt="" 
+      style={{inset: "-55px auto auto 0%"}} />
+      <img className='w-[246px] ' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" /> */}
     </div>
+
   </div>
 </div>
 

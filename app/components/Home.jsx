@@ -126,7 +126,7 @@ function Home() {
     Strategie für nachhaltig profitables Trading.
   </div>
 
-  <div className="relative z-[1000] fadeInUp" style={{ animationDelay: "0.6s" }}>
+  <div className="relative z-[1000]">
     <Button />
     <div className="flex items-center justify-center mt-[2rem] sm:mt-[1rem] fadeInUp" style={{ animationDelay: "0.8s" }}>
       <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png" alt="Avatar" width={114} height={30.19} />

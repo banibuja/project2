@@ -1,4 +1,4 @@
-"use client"; // This is necessary if you're working with Next.js in app directory.
+"use client"; 
 
 import { useState } from "react";
 import PhoneInput from 'react-phone-input-2';
@@ -77,16 +77,19 @@ const Button = () => {
           className="block w-full mb-4 rounded-[10px] text-[14px] bg-[#edf1f6] p-[18px]"
           type="text"
           placeholder="Vorname"
+          required
         />
         <input
           className="block w-full mb-4 rounded-[10px] text-[14px] bg-[#edf1f6] p-[18px]"
           type="text"
           placeholder="Nachname"
+          required
         />
         <input
           className="block w-full mb-4 rounded-[10px] text-[14px] bg-[#edf1f6] p-[18px]"
           type="email"
           placeholder="E-Mail Adresse"
+          required
         />
 
         <div className="block w-full mb-4 rounded-[10px] bg-[#edf1f6] p-[15px] relative z-[1001]">
@@ -120,9 +123,9 @@ const Button = () => {
           <div className="btn-text w-full text-center z-10">
             Jetzt Zugang sichern
           </div>
-          <div className="btn-arrow-icon z-10">
-            <img
-              src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg"
+          <div className="btn-arrow-icon" >
+            <img className="w-[30px] h-[30px]"
+              src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66be15dd3e60e45dfe4c8ab4_Check%20box.png"
               alt="Arrow"
             />
           </div>

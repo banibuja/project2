@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useState } from 'react';
-import Button from './Button'
+import Button from './assets/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
 
 
@@ -73,8 +76,8 @@ function Home() {
         </nav>
       </header>
 
-      <div className=" w-full relative  flex flex-col items-center justify-center z-20 mt-[10rem] sm:mt-5">
-  <div className="text-[12px] text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-2 flex ms-center uppercase mt-4 sm:mt-2">
+      <div className=" w-full relative  flex flex-col items-center justify-center z-20 lg:mt-[3rem] mt-[2rem] sm:mt-5">
+  <div className="text-[12px]  text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-2 flex ms-center uppercase mt-[4rem] sm:mt-2">
     <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
     Kostenloser Trading-Kurs
   </div>
@@ -115,12 +118,11 @@ function Home() {
 
 <div className="relative z-10 mt-[5rem]">
   <img
-    className="images1 w-[925px] h-[430.02px] object-cover mx-auto relative sm:w-[90%] sm:h-auto md:w-[30%] lg:w-[50%]"
+    className="images1 w-[600px] h-[300.02px] object-cover mx-auto relative sm:w-[90%] sm:h-auto md:w-[80%] lg:w-[77%] xl:w-[43%]"
     src="images/dashboard.webp"
     alt="New Image"
     loading='lazy'
-    sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 1439px) 92vw, 925px"
-    // srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-500.webp 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-800.webp 800w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-1080.webp 1080w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-1600.webp 1600w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-2000.webp 2000w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-2600.webp 2600w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-3200.webp 3200w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2.webp 3959w"
+    
   />
 
   <div
@@ -129,7 +131,7 @@ function Home() {
   ></div>
 </div>
 
-<div className="grid grid-cols-2 gap-4 sm:w-[90%] md:grid-cols-6 md:w-[70%] m-auto mt-[5rem]">
+<div className="grid grid-cols-2 gap-4 sm:w-[90%] md:grid-cols-6 md:w-[70%]  lg:w-[190%] xl:w-[73%] m-auto mt-[5rem]">
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c5162bf58d9ecb4f3b9_01.avif" alt="" />
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c50de0cca26456f73d0_02.avif" alt="" />
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c51fe74fff065641ef3_03.avif" alt="" />
@@ -148,42 +150,43 @@ function Home() {
   </div>
 
   <div className="flex flex-wrap justify-center gap-4 w-full h-auto mt-[3rem]">
-    {/* Card 1 */}
-    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd106312edd26ca53b1b77_Untitled-3%201.avif" alt="" />
-      <div className="text-center sm:text-left">
-        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Komplette finanzielle Unabhängigkeit</div>
-        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Bau dir ein zweites finanzielles Standbein auf, mache dich langfristig unabhängig von deinem Arbeitgeber und sichere dir einen höheren Lebensstandard.</div>
-      </div>
-    </div>
-
-    {/* Card 2 */}
-    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd1063d7e938d9f5c79317_Untitled-3%201-1.avif" alt="" />
-      <div className="text-center sm:text-left">
-        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Sprenge deine Einkommensgrenzen</div>
-        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Als Trader sind deinem Einkommen keine künstlichen Grenzen mehr gesetzt. Mit dieser Fähigkeit hast du die volle Kontrolle über dein Einkommen.</div>
-      </div>
-    </div>
-
-    {/* Card 3 */}
-    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10635b19cc084b2099c2_Untitled-3%201-2.avif" alt="" />
-      <div className="text-center sm:text-left">
-        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Lebe nach deinen Regeln</div>
-        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Genieße ein Leben ohne Einschränkungen. Du tradest wo und wann du willst - dabei ist es egal, ob du Zuhause bist oder die Welt bereisen möchtest.</div>
-      </div>
-    </div>
-
-    {/* Card 4 */}
-    <div className="w-full sm:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-      <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10638eee05feffd9aaa0_Untitled-3%201-3.avif" alt="" />
-      <div className="text-center sm:text-left">
-        <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Verdiene in jeder Marktlage</div>
-        <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Daytrader profitieren sowohl von steigenden als auch von fallenden Kursen. Mit unserer TF-Methode kannst du markunabhängig Gewinne erzielen.</div>
-      </div>
+  {/* Card 1 */}
+  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd106312edd26ca53b1b77_Untitled-3%201.avif" alt="" />
+    <div className="text-center sm:text-left">
+      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Komplette finanzielle Unabhängigkeit</div>
+      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Bau dir ein zweites finanzielles Standbein auf, mache dich langfristig unabhängig von deinem Arbeitgeber und sichere dir einen höheren Lebensstandard.</div>
     </div>
   </div>
+
+  {/* Card 2 */}
+  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd1063d7e938d9f5c79317_Untitled-3%201-1.avif" alt="" />
+    <div className="text-center sm:text-left">
+      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Sprenge deine Einkommensgrenzen</div>
+      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Als Trader sind deinem Einkommen keine künstlichen Grenzen mehr gesetzt. Mit dieser Fähigkeit hast du die volle Kontrolle über dein Einkommen.</div>
+    </div>
+  </div>
+
+  {/* Card 3 */}
+  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10635b19cc084b2099c2_Untitled-3%201-2.avif" alt="" />
+    <div className="text-center sm:text-left">
+      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Lebe nach deinen Regeln</div>
+      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Genieße ein Leben ohne Einschränkungen. Du tradest wo und wann du willst - dabei ist es egal, ob du Zuhause bist oder die Welt bereisen möchtest.</div>
+    </div>
+  </div>
+
+  {/* Card 4 */}
+  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
+    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10638eee05feffd9aaa0_Untitled-3%201-3.avif" alt="" />
+    <div className="text-center sm:text-left">
+      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Verdiene in jeder Marktlage</div>
+      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Daytrader profitieren sowohl von steigenden als auch von fallenden Kursen. Mit unserer TF-Methode kannst du markunabhängig Gewinne erzielen.</div>
+    </div>
+  </div>
+</div>
+
 </div>
 <div className="part3 w-full h-auto bg-[#041212] pt-[3rem] text-[#fff] flex flex-col items-center rounded-2xl">
 
@@ -393,13 +396,47 @@ function Home() {
 </div>
 
 <div className="part3 bg-gradient-[#f1f3f5, #fff]">
-<div className="mt-[6rem] flex justify-center ">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" className="w-6 h-6 ml-2">
-    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-  </svg>
-  <p>Trustpilot</p>
+<div className="mt-[6rem] flex justify-center">
+      {/* <div className="trustscore text-[18px]">Hervirragend</div>
+      
 
-  </div>
+
+      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem] ml-[1rem]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+      </svg>
+      </div>
+      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+      </svg>
+      </div>
+      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+      </svg>
+      </div>
+      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+      </svg>
+      </div>
+      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+      </svg>
+      </div>
+
+      <p>196 Bewetungen auf</p> */}
+
+
+       
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" className="w-6 h-6 ml-2">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+      </svg>
+      <p className='font-[600]'>Trustpilot</p>
+    </div>
+    
 
 
   <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem] z-0">
@@ -722,8 +759,15 @@ function Home() {
         <div key={index} className="bg-white mb-4 p-4 rounded-lg shadow-lg cursor-pointer" onClick={() => toggleAccordion(index)}>
           <div className="flex justify-between items-center">
             <h2 className="text-sm lg:text-[15px] tracking-[.18px] p-2 text-black font-[600]">{faq.question}</h2>
-            <span className="text-lg lg:text-2xl font-bold">{activeIndex === index ? '-' : '+'}</span>
+            
+            <label class="container">
+          <input type="checkbox"  />
+          <div class="line"></div>
+          <div class="line line-indicator"></div>
+        </label>
+            
           </div>
+          
           {activeIndex === index && (
             <div className="mt-2 text-[#0006] text-xs lg:text-[14px] p-2 leading-[160%]">
               {faq.answer}

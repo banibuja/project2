@@ -757,17 +757,16 @@ function Home() {
     <div className="columns-click w-full lg:w-[38rem]">
       {faqs.map((faq, index) => (
         <div key={index} className="bg-white mb-4 p-4 rounded-lg shadow-lg cursor-pointer" onClick={() => toggleAccordion(index)}>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center relative">
             <h2 className="text-sm lg:text-[15px] tracking-[.18px] p-2 text-black font-[600]">{faq.question}</h2>
-            
-            <label class="container">
-          <input type="checkbox"  />
-          <div class="line"></div>
-          <div class="line line-indicator"></div>
-        </label>
-            
+
+            <label className="container">
+              <input type="checkbox" checked={activeIndex === index} readOnly />
+              <div className="line"></div>
+              <div className={`line line-indicator ${activeIndex === index ? 'active' : ''}`}></div>
+            </label>
           </div>
-          
+
           {activeIndex === index && (
             <div className="mt-2 text-[#0006] text-xs lg:text-[14px] p-2 leading-[160%]">
               {faq.answer}

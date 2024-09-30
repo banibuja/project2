@@ -5,11 +5,17 @@
 
 main{
     font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
  
 }
 
 .light-bg {
     background-color: #f1f3f5;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 body {

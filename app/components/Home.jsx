@@ -86,7 +86,20 @@ function Home() {
   <div className=" desc1 text-center w-[30rem]  text-[16px] text-[#728291] tracking-[-.32px] leading-[1.5] my-4 px-4  sm:tracking-[.2px] sm:px-2">
     Dein Start ins Daytrading mit Schritt für Schritt Anleitungen, sofort umsetzbaren Tipps, Brokerempfehlungen, Chartanalyse und DAX  Strategie für nachhaltig profitables Trading.
   </div>
+  <div className="relative z-[1000]">
   <Button />
+  <div className="flex items-center justify-center  mt-[2rem] sm:mt-[1rem]">
+          <img
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+            alt="Avatar"
+            width={114}
+            height={30.19}
+          />
+          <div className="text-people ml-4 text-black text-[12px] sm:text-[10px]">
+            Beretis <strong>2.145+</strong> Mal bestellt
+          </div>
+        </div>
+</div>
 
   </div>
 
@@ -358,41 +371,21 @@ function Home() {
       </div>
     </div>
 
-    <div className="button bg-[#13f97b] mt-[2rem] h-20 w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
-  <div className="btn-text w-full text-center z-10">
-    Jetzt kostenlosen Zugang sichern
-  </div>
-
-  <div className="btn-arrow-icon z-10">
-    <img 
-      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg" 
-      alt="Arrow"
-    />
-  </div>
-
-  <div className="interaction absolute top-0 left-0 h-full w-full animate-interaction pointer-events-none">
-    <img 
-      className="h-full w-full object-cover"
-      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
-      alt="interaction"
-      loading="lazy"
-      sizes="(max-width: 100px), 200.998046875px"
-      srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%25203404-p-500.png 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp 654w"
-    />
-  </div>
+   
+    <div className="relative z-[1000] text-[#000]">
+  <Button />
+  <div className="flex items-center justify-center  mb-[4rem] mt-[2rem] sm:mt-[1rem]">
+          <img
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+            alt="Avatar"
+            width={114}
+            height={30.19}
+          />
+          <div className="text-people ml-4 text-white text-[12px]  sm:text-[10px]">
+            Beretis <strong>2.145+</strong> Mal bestellt
+          </div>
+        </div>
 </div>
-<div className="flex items-center justify-center mt-[2rem]  mb-[5rem] z-20 sm:mt-[1rem]">
-    <img
-      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
-      alt="Avatar"
-      width={114}
-      height={30.19}
-    />
-    <div className="text-people ml-4 text-white text-[12px] sm:text-[10px]">
-      Beretis <strong>2.145+</strong> Mal bestellt
-    </div>
-  </div>
-
   </>
 )}
 
@@ -409,7 +402,7 @@ function Home() {
   </div>
 
 
-  <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem]">
+  <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem] z-0">
   <div className="relative flex flex-col items-start rounded-[12px] pr-[32px] pl-[32px] bg-[#fff] p-4 pt-[2rem] w-[25.5rem] h-auto text-[28px] tracking-[.35px] leading-[100%] font-[600]">
     <span className="text-[#0ec661]">2.145+</span> 
     <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem]">Zurfriedene</span>
@@ -437,14 +430,14 @@ function Home() {
 
   {/* Kolona 2 */}
   <div className="relative flex flex-col rounded-[12px] items-start bg-[#fff] pt-[2rem] pl-[2rem] w-[53rem] h-auto text-[28px] tracking-[.35px] leading-[100%] font-[600] col-start-2 z-20">
-    <span className="block text-[28px]  tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-20">Mehr als</span>
-    <span className="text-[#0ec661] z-20">12 Top-Experten</span> 
-    <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-20">im Teams</span>
+    <span className="block text-[28px]  tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-10">Mehr als</span>
+    <span className="text-[#0ec661] relative z-10">12 Top-Experten</span> 
+    <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] relative z-10">im Teams</span>
     
     <img
       src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/664cd3b45a1b4940ebcfc4ab_272327.webp"
       alt=""
-      className="w-[820.33px] h-[300px] object-cover bg-contain bg-repeat mr-2 mt-[-6.3rem] z-10"
+      className="w-[820.33px] h-[300px] object-cover z-0 bg-contain bg-repeat mr-2 mt-[-6.3rem]"
       style={{ backgroundImage: '100%' }}
     />
     <div
@@ -468,9 +461,9 @@ function Home() {
 <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem]">
   <div className="relative flex flex-col items-start rounded-[12px] pr-[32px] pl-[32px] bg-[#fff] p-4 pt-[2rem] w-[25.5rem] h-auto text-[28px] tracking-[.35px] leading-[100%] font-[600]">
 
-    <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-10">Wir sind ein</span>
-    <span className="text-[#0ec661] z-10">deutsches</span> 
-    <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-10">Unternehmen</span>
+    <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-20">Wir sind ein</span>
+    <span className="text-[#0ec661] z-20">deutsches</span> 
+    <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-20">Unternehmen</span>
     
     <img
       src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/664cd3ac78e980e08b45322e_272326.webp"
@@ -762,40 +755,21 @@ function Home() {
       </div>
 
       {/* Button Section */}
-      <div className="button bg-[#13f97b] mt-[2rem] h-[60px] md:h-20 w-full md:w-[388px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[14px] md:text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
-        <div className="btn-text w-full text-center z-10">
-          Jetzt kostenlosen Zugang sichern
-        </div>
-
-        <div className="btn-arrow-icon z-10">
-          <img 
-            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3e88_arrow-right%201.svg" 
-            alt="Arrow"
+      <div className="relative z-[1000] text-[#000]">
+  <Button />
+  <div className="flex items-center justify-start  mb-[4rem] mt-[2rem] sm:mt-[1rem]">
+          <img
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+            alt="Avatar"
+            width={114}
+            height={30.19}
           />
+          <div className="text-people ml-4 text-black text-[12px]  sm:text-[10px]">
+            Beretis <strong>2.145+</strong> Mal bestellt
+          </div>
         </div>
-
-        <div className="interaction absolute top-0 left-0 h-full w-full animate-interaction pointer-events-none">
-          <img 
-            className="h-full w-full object-cover"
-            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
-            alt="interaction"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <div className="flex items-center mt-[2rem] sm:mt-[1rem] mb-[2rem] z-20">
-        <img
-          src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
-          alt="Avatar"
-          width={114}
-          height={30.19}
-        />
-        <div className="text-people ml-4 text-black text-[10px] md:text-[12px]">
-          Beretis <strong>2.145+</strong> Mal bestellt
-        </div>
-      </div>
-    </div>
+</div>
+</div>
 
     {/* Right Section */}
     <div className="right mt-[2rem] md:mt-[4rem] w-full md:w-auto">
@@ -862,6 +836,8 @@ function Home() {
     </div>
   </div>
 </div>
+
+
 
 
 

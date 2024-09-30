@@ -216,3 +216,46 @@ body {
   transform: translateY(-50%);
 }
 
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0; /* Ensures elements start as invisible */
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* Start off to the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Move into place */
+  }
+}
+
+.fadeRight {
+  animation-name: fadeRight;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.opacity-0 {
+  opacity: 0; /* Start with opacity 0 */
+}
+
+.animate {
+  opacity: 1; /* Ensure the card is visible after animation */
+}

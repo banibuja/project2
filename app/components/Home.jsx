@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Button from './assets/Button'
+import Cards from './assets/Cards'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
@@ -13,6 +14,31 @@ function Home() {
 
   const [showColumns, setShowColumns] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // Unobserve once animated
+          }
+        });
+      },
+      { threshold: 0.2 } // Adjust the threshold to your liking
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      cardRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -76,35 +102,41 @@ function Home() {
         </nav>
       </header>
 
-      <div className=" w-full relative z-[1000]  flex flex-col items-center justify-center lg:mt-[3rem] mt-[2rem] sm:mt-5">
-  <div className="text-[12px]  text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-2 flex ms-center uppercase mt-[4rem] sm:mt-2">
-    <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
+      <div className="w-full relative z-[1000] flex flex-col items-center justify-center lg:mt-[3rem] mt-[2rem] sm:mt-5">
+  <div
+    className="text-[12px] text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-2 flex ms-center uppercase mt-[4rem] sm:mt-2 fadeInUp"
+    style={{ animationDelay: "0s" }}
+  >
+    <span className="online h-3 w-3 bg-green-500 rounded-full mr-2"></span>
     Kostenloser Trading-Kurs
   </div>
 
-  <h1 className='text-center text-black text-[28px] md:text-[56px] tracking-[.7px] font-bold leading-[1.1] mt-6 sm:text-[22px] sm:leading-[1.2]'>
+  <h1
+    className="title-top text-center text-black text-[28px] md:text-[56px] tracking-[.7px] font-bold leading-[1.1] mt-6 sm:text-[22px] sm:leading-[1.2] fadeInUp"
+    style={{ animationDelay: "0.2s" }}
+  >
     In nur 7 Tagen seriös <br /> Trading lernen
   </h1>
 
-  <div className=" desc1 text-center w-[30rem]  text-[16px] text-[#728291] tracking-[-.32px] leading-[1.5] my-4 px-4  sm:tracking-[.2px] sm:px-2">
-    Dein Start ins Daytrading mit Schritt für Schritt Anleitungen, sofort umsetzbaren Tipps, Brokerempfehlungen, Chartanalyse und DAX  Strategie für nachhaltig profitables Trading.
+  <div
+    className="desc1 text-center w-[30rem] text-[16px] text-[#728291] tracking-[-.32px] leading-[1.5] my-4 px-4 sm:tracking-[.2px] sm:px-2 fadeInUp"
+    style={{ animationDelay: "0.4s" }}
+  >
+    Dein Start ins Daytrading mit Schritt für Schritt Anleitungen, sofort umsetzbaren Tipps, Brokerempfehlungen, Chartanalyse und DAX
+    Strategie für nachhaltig profitables Trading.
   </div>
-  <div className="relative z-[1000]">
-  <Button />
-  <div className="flex items-center justify-center  mt-[2rem] sm:mt-[1rem]">
-          <img
-            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
-            alt="Avatar"
-            width={114}
-            height={30.19}
-          />
-          <div className="text-people ml-4 text-black text-[12px] sm:text-[10px]">
-            Beretis <strong>2.145+</strong> Mal bestellt
-          </div>
-        </div>
+
+  <div className="relative z-[1000] fadeInUp" style={{ animationDelay: "0.6s" }}>
+    <Button />
+    <div className="flex items-center justify-center mt-[2rem] sm:mt-[1rem] fadeInUp" style={{ animationDelay: "0.8s" }}>
+      <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png" alt="Avatar" width={114} height={30.19} />
+      <div className="text-people ml-4 text-black text-[12px] sm:text-[10px]">
+        Beretis <strong>2.145+</strong> Mal bestellt
+      </div>
+    </div>
+  </div>
 </div>
 
-  </div>
 
         
 
@@ -116,7 +148,7 @@ function Home() {
       />
 
 
-<div className="relative z-10 mt-[5rem]">
+<div className="relative z-10 mt-[5rem] fadeInUp" style={{ animationDelay: "0.9s" }}>
   <img
     className="images1 w-[600px] h-[300.02px] object-cover mx-auto relative sm:w-[90%] sm:h-auto md:w-[80%] lg:w-[77%] xl:w-[43%]"
     src="images/dashboard.webp"
@@ -140,52 +172,16 @@ function Home() {
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c509710055dd7251e0a_06.avif" alt="" />
 </div>
 
-<div className="Tradingdeine w-full h-auto mt-[5rem] px-4 mb-[4rem]">
-  <h1 className="font-bold text-[30px] sm:text-[45px] tracking-[.4px] leading-[1.2] text-center">
+<div className="Tradingdeine w-full h-auto mt-[5rem] px-4 mb-[4rem] " >
+  <h1 className="font-bold text-[30px] sm:text-[45px] tracking-[.4px] leading-[1.2] text-center fadeInUp" style={{ animationDelay: "0.9s" }}>
     Wie ergologreiches Trading deine <br />
-    <span className="block text-[#0cdc6a]">Zuknfit Verandern kann</span>
+    <span className="block text-[#0cdc6a] fadeInUp" style={{ animationDelay: "0.9s" }}>Zuknfit Verandern kann</span>
   </h1>
-  <div className="desc flex justify-center mt-4 text-[#728291] text-[14px] sm:text-[16px]">
+  <div className="desc flex justify-center mt-4 text-[#728291] text-[14px] sm:text-[16px] fadeInUp" style={{ animationDelay: "0.9s" }}>
     mit nur 30-50 Minuten Zitaufawnd am Tag.
   </div>
 
-  <div className="flex flex-wrap justify-center gap-4 w-full h-auto mt-[3rem]">
-  {/* Card 1 */}
-  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd106312edd26ca53b1b77_Untitled-3%201.avif" alt="" />
-    <div className="text-center sm:text-left">
-      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Komplette finanzielle Unabhängigkeit</div>
-      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Bau dir ein zweites finanzielles Standbein auf, mache dich langfristig unabhängig von deinem Arbeitgeber und sichere dir einen höheren Lebensstandard.</div>
-    </div>
-  </div>
-
-  {/* Card 2 */}
-  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd1063d7e938d9f5c79317_Untitled-3%201-1.avif" alt="" />
-    <div className="text-center sm:text-left">
-      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Sprenge deine Einkommensgrenzen</div>
-      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Als Trader sind deinem Einkommen keine künstlichen Grenzen mehr gesetzt. Mit dieser Fähigkeit hast du die volle Kontrolle über dein Einkommen.</div>
-    </div>
-  </div>
-
-  {/* Card 3 */}
-  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10635b19cc084b2099c2_Untitled-3%201-2.avif" alt="" />
-    <div className="text-center sm:text-left">
-      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Lebe nach deinen Regeln</div>
-      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Genieße ein Leben ohne Einschränkungen. Du tradest wo und wann du willst - dabei ist es egal, ob du Zuhause bist oder die Welt bereisen möchtest.</div>
-    </div>
-  </div>
-
-  {/* Card 4 */}
-  <div className="w-full md:w-[48%] lg:w-[39rem] h-auto flex flex-col sm:flex-row items-center bg-[#fff] p-4 sm:p-[30px] rounded-[10px]">
-    <img className='h-[100px] sm:h-[129px] w-[100px] sm:w-[120px] sm:mr-4' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd10638eee05feffd9aaa0_Untitled-3%201-3.avif" alt="" />
-    <div className="text-center sm:text-left">
-      <div className="font-bold text-[20px] sm:text-[24px] leading-[1.2]">Verdiene in jeder Marktlage</div>
-      <div className='text-[14px] sm:text-[16px] text-[#728291] leading-[1.5] mt-2'>Daytrader profitieren sowohl von steigenden als auch von fallenden Kursen. Mit unserer TF-Methode kannst du markunabhängig Gewinne erzielen.</div>
-    </div>
-  </div>
-</div>
+ <Cards />
 
 </div>
 <div className="part3 w-full h-auto bg-[#041212] pt-[3rem] text-[#fff] flex flex-col items-center rounded-2xl">

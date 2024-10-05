@@ -136,10 +136,10 @@ function Home() {
 
 <div className="relative z-10 mt-[2rem] fadeInUp" style={{ animationDelay: "0.9s" }}>
   <img
-    className="images1 w-[150px] h-[75px] object-cover mx-auto relative sm:w-[50%] md:w-[70%] md:mt-[4.4rem] lg:w-[77%] xl:w-[43%]"
+    className="images1 w-[200px] h-[100px] object-cover mx-auto relative sm:w-[50%] sm:h-auto md:w-[70%]  md:mt-[4.4rem] lg:w-[77%] xl:w-[43%]"
     src="images/dashboard.webp"
     alt="New Image"
-    loading="lazy"
+    loading='lazy'
   />
 
   <div

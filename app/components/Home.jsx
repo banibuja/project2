@@ -68,11 +68,12 @@ function Home() {
       <img
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
         alt="Avatar"
-        className="w-[118px] sm:w-[114px]"  // Slightly larger image for mobile
+        className="w-[118px] sm:w-[114px]"  
       />
-      <div className="text-nav ml-4 text-black text-[12px]">
-        Beretis <strong>2.145+</strong> Mal bestellt
-      </div>
+      <div className="text-nav ml-4 text-black text-[12px] md:text-[12px]">
+          Beretis <strong>2.145+</strong> Mal bestellt
+        </div>
+
     </div>
   </nav>
 </header>
@@ -135,19 +136,25 @@ function Home() {
 
 
 
-<div className="relative z-10 mt-[2rem] fadeInUp" style={{ animationDelay: "0.9s" }}>
+<div className="relative z-10 mt-[2rem] sm:mt-[3rem] fadeInUp flex justify-center" style={{ animationDelay: "0.9s" }}>
   <img
-    className="images1 w-[60px] h-auto object-cover mx-auto relative sm:w-[30%] sm:h-auto md:w-[50%] lg:w-[70%] xl:w-[43%]"
-    src="images/dashboard.webp"
+    className="images1 h-auto object-cover relative w-[50%] sm:w-[60%] md:w-[70%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%]" // Adjusted width for mobile
+    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d72bafcf5c6b7b6a1493d7_MacBook%20Air%20M2-p-1080.webp"
     alt="New Image"
     loading="lazy"
   />
 
   <div
-    className="blur-white absolute inset-auto w-full h-[150px] sm:h-[200px] md:h-[250px] bg-gradient-to-b from-[#f1f3f500] to-[#f1f3f5] z-30"
-    style={{ inset: 'auto 0% -1%' }}
+    className="blur-white absolute inset-auto w-full h-[110px] sm:h-[200px] md:h-[250px] z-30"
+    style={{
+      inset: 'auto 0% -1%',
+      backgroundImage: 'linear-gradient(#f1f3f500, #f1f3f5 60%)'
+    }}
   ></div>
 </div>
+
+
+
 
 
 

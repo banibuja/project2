@@ -197,7 +197,7 @@ function Home() {
 <Tag />
 
 {!showColumns && (
-    <div className="w-full h-auto mt-10 flex justify-center mb-[4rem]">
+    <div className="w-full h-auto mt-10 flex justify-center mb-[1.5rem] md:mb-[4rem]">
         <div
             onClick={handleToggleColumns}
             className="button flex items-center justify-between w-[20rem] bg-[#69bc8f26] font-[600] rounded-[10px] p-[20px] m-auto cursor-pointer"
@@ -395,7 +395,7 @@ function Home() {
     
 
 
-  <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem] z-0">
+  <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem] z-0 px-5">
   <div className="relative flex flex-col items-start rounded-[12px] pr-[32px] pl-[32px] bg-[#fff] p-4 pt-[2rem] w-[25.5rem] h-auto text-[28px] tracking-[.35px] leading-[100%] font-[600]">
     <span className="text-[#0ec661]">2.145+</span> 
     <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem]">Zurfriedene</span>
@@ -404,7 +404,7 @@ function Home() {
     <img
       src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f60_images-group-p-500.png"
       alt=""
-      className="mt-[2rem] object-cover bg-contain bg-repeat w-[27rem] h-[10.1rem] "
+      className="mt-[1rem] object-cover bg-contain bg-repeat w-[27rem] h-[10.6rem] "
       style={{ backgroundImage: '100%' }}
     />
     
@@ -430,10 +430,17 @@ function Home() {
     <img
       src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/664cd3b45a1b4940ebcfc4ab_272327.webp"
       alt=""
-      className="w-[820.33px] h-[300px] object-cover z-0 bg-contain bg-repeat mr-2 mt-[-6.3rem]"
+      className="hidden md:block w-auto h-[200px] object-cover z-0 bg-contain bg-repeat ml-[-2rem] md:mr-2 mt-[-2.3rem] md:mt-[-6.3rem] md:w-[820.33px] md:h-[300px]"
       style={{ backgroundImage: '100%' }}
     />
-    <div
+    <img
+      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/664cd803960057669fadea99_5.webp"
+      alt=""
+      className="block md:hidden w-auto h-auto object-cover z-0 bg-contain mt-[-8rem] bg-repeat ml-[-1rem] md:mr-2 md:mt-[-6.3rem] md:w-[820.33px] md:h-[300px]"
+      style={{ backgroundImage: '100%' }}
+    />
+
+    {/* <div
       className="trader_block-overlay"
       style={{
         backgroundImage: 'linear-gradient(to top, #fff, #0000)',
@@ -444,14 +451,14 @@ function Home() {
         zIndex: 10,
         marginRight: "4rem",
       }}
-    />
+    /> */}
   </div>
 
 </div> 
 
 
 
-<div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem]">
+<div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[1rem]">
   <div className="relative flex flex-col items-start rounded-[12px] pr-[32px] pl-[32px] bg-[#fff] p-4 pt-[2rem] w-[25.5rem] h-auto text-[28px] tracking-[.35px] leading-[100%] font-[600]">
 
     <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem] z-20">Wir sind ein</span>
@@ -529,8 +536,8 @@ function Home() {
 </div>
 </div>
 </div>
-<div className="part5 mt-[6rem]">
-  <div className="relative w-screen flex flex-col items-center z-20 mt-10">
+<div className="part5  md:mt-[6rem]">
+  <div className="relative w-screen flex flex-col items-center z-20 mt-10 px-5">
     <div className="text-[12px] text-black font-bold bg-white py-2 rounded-3xl px-4 flex items-center uppercase mt-4">
       <span className="h-3 w-3 bg-green-500 rounded-full mr-2"></span>
       Erkennstt du dich hier wieder?

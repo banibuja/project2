@@ -760,7 +760,6 @@ function Home() {
 <div className="part7 flex justify-center items-center w-full py-6">
   <div className="section3 part7-1 mb-[-19rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
   <div className="footer_blur hidden md:block"> </div>
-  <div className="footer_blur1 block lg:hidden"></div>
 
 
     {/* Left Section */}
@@ -792,11 +791,14 @@ function Home() {
         </div>
         
 </div>
+
      
 </div>
 
+
     {/* Right Section */}
     <div className="right mt-[2rem] md:mt-[4rem] w-full md:w-auto">
+
 
 
       
@@ -810,6 +812,8 @@ function Home() {
 <img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" />
 
 </div> 
+<div className="footer_blur1 block lg:hidden"></div>
+
 
 
     </div>

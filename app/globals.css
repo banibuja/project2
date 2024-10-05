@@ -176,11 +176,9 @@ body {
     border-radius: 100%;
     width: 550px;
     height: 124px;
-    position: relative;
-    bottom: -50rem;
-    left: 13rem;
-    /* left: -20%; */
+    position: absolute;
     transform: translate(-50%);
+    left: 40%;
 
 
 

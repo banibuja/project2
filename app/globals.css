@@ -105,12 +105,12 @@ body {
   } */
 
   @media (max-width: 640px) {
-    .button1 {
+    /* .button1 {
         width: 22rem;
         align-items: center;
         display: flex;
         justify-content: center;
-    }
+    } */
 
     .images1 {
         width: 100%;
@@ -175,14 +175,18 @@ body {
     background-image: linear-gradient(90deg, #13f97b, #00d560);
     border-radius: 100%;
     width: 550px;
-    height: 124px;
+    height: 140px;
     position: absolute;
-    bottom: 90rem;
-    left: 50%;
+    bottom: 88rem;
+    left: 35%;
     transform: translate(-50%);
 
 
 
+  }
+  .react-tel-input .flag-dropdown{
+    border: none;
+    background-color: #edf1f6;
   }
 
 

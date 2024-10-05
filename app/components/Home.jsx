@@ -759,8 +759,9 @@ function Home() {
 
 <div className="part7 flex justify-center items-center w-full py-6">
   <div className="section3 part7-1 mb-[-21rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
-  <div className="footer_blur1"> </div>
   <div className="footer_blur hidden md:block"> </div>
+  <div className="footer_blur1 block lg:hidden"></div>
+
 
     {/* Left Section */}
     <div className="left mt-[2rem] md:mt-[7rem] text-center md:text-left w-full md:w-auto">
@@ -789,6 +790,7 @@ function Home() {
             Beretis <strong>2.145+</strong> Mal bestellt
           </div>
         </div>
+        
 </div>
      
 </div>
@@ -800,18 +802,7 @@ function Home() {
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative hidden md:block" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385-p-1080.avif" alt="" />
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative block md:hidden" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdd5372eaada0fae9eccc1_image%201385m.avif" alt="" />
 
-      <img 
-        className='absolute w-[200px] inset-[82.13%_20%_0_0] sm:inset-[79.18%_0_0_52%]' 
-        src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" 
-        alt="" 
-      />
 
-      <img 
-        className='absolute w-[200px] inset-[86.14%_0%_0_46%] sm:inset-[84.84%_0_0_69%] z-10' 
-        src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" 
-        alt="" 
-      />
-    
 
     </div>
     <div className="relative z-[1000] text-[#000] block md:hidden"> 

@@ -50,108 +50,108 @@ const Button = () => {
         </div>
 
       
-
-        {/* Modal */}
-        {showModal && (
-  <div className="fixed px-5 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000] backdrop-blur-md">
-    <div className="bg-white absolute rounded-lg p-8 w-full max-w-lg top-[7rem] z-[1001]"> {/* Changed max-w-md to max-w-lg */}
-      {/* Close Button */}
-      <button
-        className="absolute top-4 right-4"
-        onClick={handleCloseModal}
-      >
-        <img
-          className="text-[#fff] h-[20px] w-[20px]"
-          src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd20b15f0d9108f1af0809_Group%202087326444.png"
-          alt="Close"
-          style={{ filter: "grayscale(1)" }}
-        />
-      </button>
-
-      {/* Modal Content */}
-      <h1 className="form text-[28px] font-bold mb-6 leading-[1.5]">
-        Nur noch ein Schritt...
-      </h1>
-      <form>
-        <input
-          className="block w-full mb-4 rounded-[10px] text-[14px] bg-[#edf1f6] p-[18px]"
-          type="text"
-          placeholder="Vorname"
-          required
-        />
-        <input
-          className="block w-full mb-4 rounded-[10px] text-[14px] bg-[#edf1f6] p-[18px]"
-          type="text"
-          placeholder="Nachname"
-          required
-        />
-        <input
-          className="block w-full mb-4 rounded-[10px] text-[14px] bg-[#edf1f6] p-[18px]"
-          type="email"
-          placeholder="E-Mail Adresse"
-          required
-        />
-
-        <div className="block w-full mb-4 rounded-[10px] bg-[#edf1f6] p-[15px] relative z-[1001]">
-          <PhoneInput
-            country={'de'}
-            value={phone}
-            onChange={setPhone}
-            containerClass="w-full"
-            inputStyle={{
-              width: '90%',
-              backgroundColor: '#edf1f6',
-              border: 'none',
-              fontSize: '14px',
-              padding: '18px',
-              borderRadius: '10px',
-              marginLeft:"43px",
-              fontWeight: "bold",
-              zIndex: "1001"
-            }}
-            buttonStyle={{
-              backgroundColor: '#edf1f6',
-            }}
-            inputProps={{
-              name: 'phone',
-              required: true,
-            }}
+        <div className="p-[5rem]">
+  {/* Modal */}
+  {showModal && (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000] backdrop-blur-md p-5">
+      <div className="bg-white relative rounded-[20px] p-8 w-full max-w-lg lg:mx-0 z-[1001]">
+        {/* Close Button */}
+        <button
+          className="absolute top-4 right-4"
+          onClick={handleCloseModal}
+        >
+          <img
+            className="text-[#fff] h-[20px] w-[20px]"
+            src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd20b15f0d9108f1af0809_Group%202087326444.png"
+            alt="Close"
+            style={{ filter: "grayscale(1)" }}
           />
-        </div>
+        </button>
 
-        <div className="button1 bg-[#13f97b] mt-[2rem] h-20 w-[450px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
-          <div className="btn-text w-full text-center z-10">
-            Jetzt Zugang sichern
-          </div>
-          <div className="btn-arrow-icon" >
-            <img className="w-[30px] h-[30px]"
-              src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66be15dd3e60e45dfe4c8ab4_Check%20box.png"
-              alt="Arrow"
+        {/* Modal Content */}
+        <h1 className="form text-[24px] text-center font-bold mb-6 leading-[1.5]">
+          Nur noch ein Schritt...
+        </h1>
+        <form>
+          <input
+            className="block w-full mb-4 rounded-[10px] text-[16px] bg-[#edf1f6] p-[18px]"
+            type="text"
+            placeholder="Vorname"
+            required
+          />
+          <input
+            className="block w-full mb-4 rounded-[10px] text-[16px] bg-[#edf1f6] p-[18px]"
+            type="text"
+            placeholder="Nachname"
+            required
+          />
+          <input
+            className="block w-full mb-4 rounded-[10px] text-[16px] bg-[#edf1f6] p-[18px]"
+            type="email"
+            placeholder="E-Mail Adresse"
+            required
+          />
+
+          <div className="block w-full mb-4 rounded-[10px] bg-[#edf1f6] p-[15px] relative z-[1001]">
+            <PhoneInput
+              country={'de'}
+              value={phone}
+              onChange={setPhone}
+              containerClass="w-full"
+              inputStyle={{
+                width: '90%',
+                backgroundColor: '#edf1f6',
+                border: 'none',
+                fontSize: '14px',
+                padding: '18px',
+                borderRadius: '10px',
+                marginLeft: "43px",
+                fontWeight: "bold",
+                zIndex: "1001",
+              }}
+              inputProps={{
+                name: 'phone',
+                required: true,
+              }}
             />
           </div>
-          <div className="interaction absolute top-0 left-0 h-full w-full animate-interaction pointer-events-none">
-            <img
-              className="h-full w-full object-cover"
-              src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
-              alt="interaction"
-              loading="lazy"
-              sizes="(max-width: 100px), 200.998046875px"
-              srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%25203404-p-500.png 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp 654w"
-            />
-          </div>
-        </div>
 
-        {/* Checkbox */}
-        <div className="mt-4 flex items-center">
-          <input type="checkbox" id="customCheckbox" className="custom-checkbox" />
-          <label htmlFor="customCheckbox" className="text-[#728291] text-[14px]">
-            Ich akzeptiere die Datenschutzbestimmungen
-          </label>
-        </div>
-      </form>
+          <div className="button1 bg-[#13f97b] mt-[2rem] h-20 w-[320px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
+            <div className="btn-text w-full text-center z-10">
+              Jetzt Zugang sichern
+            </div>
+            <div className="btn-arrow-icon">
+              <img className="w-[30px] h-[30px]"
+                src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66be15dd3e60e45dfe4c8ab4_Check%20box.png"
+                alt="Arrow"
+              />
+            </div>
+            <div className="interaction absolute top-0 left-0 h-full w-full animate-interaction pointer-events-none">
+              <img
+                className="h-full w-full object-cover"
+                src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp"
+                alt="interaction"
+                loading="lazy"
+                sizes="(max-width: 100px), 200.998046875px"
+                srcSet="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%25203404-p-500.png 500w, https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3f53_Rectangle%203404.webp 654w"
+              />
+            </div>
+          </div>
+
+          {/* Checkbox */}
+          <div className="mt-4 flex items-center">
+            <input type="checkbox" id="customCheckbox" className="custom-checkbox" />
+            <label htmlFor="customCheckbox" className="text-[#728291] text-[14px]">
+              Ich akzeptiere die Datenschutzbestimmungen
+            </label>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-)}
+  )}
+</div>
+
+
 
       <style jsx>{`
         @keyframes moveInteraction {

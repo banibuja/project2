@@ -53,7 +53,7 @@ const Button = () => {
 
         {/* Modal */}
         {showModal && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000] backdrop-blur-md">
+  <div className="fixed px-5 inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000] backdrop-blur-md">
     <div className="bg-white absolute rounded-lg p-8 w-full max-w-lg top-[7rem] z-[1001]"> {/* Changed max-w-md to max-w-lg */}
       {/* Close Button */}
       <button
@@ -119,7 +119,7 @@ const Button = () => {
           />
         </div>
 
-        <div className="button bg-[#13f97b] mt-[2rem] h-20 w-[450px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
+        <div className="button1 bg-[#13f97b] mt-[2rem] h-20 w-[450px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
           <div className="btn-text w-full text-center z-10">
             Jetzt Zugang sichern
           </div>

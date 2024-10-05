@@ -552,8 +552,8 @@ function Home() {
         <div className="button1 bg-[#0cdc6a] text-[#ffffff] font-bold pt-[15px] pb-[15px] text-[20px] items-center text-center rounded-[10px]">
           100% richtig:
         </div>
-        <ul className="list-inside mt-4 list-none m-10 text-[16px] text-[#728291]">
-        <li className="flex mt-10">
+        <ul className="list-inside list-none m-5 md:m-10 text-[16px] text-[#728291]">
+        <li className="flex mt-6">
         <span className="relative bg-[#0cdc6a] rounded-full w-[24px] h-[24px] mr-2 flex items-center justify-center">
       <img 
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd20174cfe997185dd9702_chek.png" 
@@ -610,8 +610,8 @@ function Home() {
         <div className="button1 bg-[#ff0000] text-[#ffffff] font-bold pt-[15px] pb-[15px] text-[20px] items-center text-center rounded-[10px] ">
         Definitiv nicht:
         </div>
-        <ul className="list-inside mt-4 list-none m-10 text-[16px] text-[#728291]">
-        <li className="flex mt-10">
+        <ul className="list-inside list-none m-5 md:m-10 text-[16px] text-[#728291]">
+        <li className="flex mt-6">
         <span className="relative bg-[#f3ecea] rounded-full w-[24px] h-[24px] mr-2 flex items-center justify-center">
       <img 
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd20b15f0d9108f1af0809_Group%202087326444.png" 
@@ -674,22 +674,22 @@ function Home() {
 
 
 
-<div className="part5 w-full h-auto bg-[#041212] rounded-[20px] flex flex-col lg:flex-row justify-center items-center mt-[6rem] mb-10 px-4 lg:px-0">
+<div className="part5 w-full h-auto bg-[#041212] rounded-[20px] flex flex-col lg:flex-row justify-center items-center mt-[4rem] md:mt-[6rem] mb-10 px-4 lg:px-0">
   
-  <div className="left-img w-full lg:w-[34rem] h-auto mt-[3rem] lg:mt-[6rem] mb-[3rem] lg:mb-[6rem]">
+  <div className="left-img w-full lg:w-[34rem] mt-[1.5rem] h-auto lg:mt-[6rem] mb-[2rem] lg:mb-[6rem]">
     <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd24c802a20ec487fa78e0_image%201376-p-1080.webp" alt="dada" loading='lazy' className="w-full lg:w-auto" />
   </div>
 
-  <div className="text text-[#ffff] mt-4 lg:mt-5 lg:ml-[7rem]">
-    <h1 className='text-[24px] lg:text-[40px] font-bold leading-[1.2] mb-5 text-center lg:text-left'>
+  <div className="text text-[#ffff] lg:mt-5 lg:ml-[7rem]">
+    <h1 className='text-[28px] lg:text-[40px] font-bold leading-[1.2] mb-5 text-center lg:text-left'>
       Der mit Abstand einfachste <br /> 
       Weg, um mit geringem <br /> 
-      <span className='text-[#0cdc6a] text-[24px] lg:text-[40px]'>
+      <span className='text-[#0cdc6a] text-[28px] lg:text-[40px]'>
         Zeitaufwand ins Trading <br />einzusteigen.
       </span>
     </h1>
 
-    <div className="descript text-[#788886] text-[14px] lg:text-[16px] tracking-[-.32px] leading-[1.5] text-center lg:text-left">
+    <div className="descript text-[#788886] text-[16px] lg:text-[16px] tracking-[-.32px] leading-[1.5] text-center lg:text-left">
       In dieser 7-tägigen Ausbildung lernst du die Grundlagen des Daytradings in leicht <br className="hidden lg:block"/> 
       verständlicher und unterhaltsamer Form und bekommst zudem noch klare Anleitungen und <br className="hidden lg:block"/>  
       Strategien, die du danach eigenständig und sicher umsetzen kannst.
@@ -703,44 +703,41 @@ function Home() {
       <br />
       <strong className='text-[#fff]'>Dein Tim</strong>
       <br /><br />
-      <img className='w-[100px] lg:w-[154px] mx-auto lg:mx-0' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd24f909b20f8f904dba08_tim%20signature.avif" alt="Tim Signature" />
+      <img className='w-[155px] lg:w-[154px] mb-[4rem] mx-auto lg:mx-0' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd24f909b20f8f904dba08_tim%20signature.avif" alt="Tim Signature" />
     </div>
   </div>
 </div>
 
-<div className="part6 py-10 px-4 lg:py-16">
+<div className="part6 py-5 px-4 lg:py-16">
   <div className="part6-1 flex flex-col lg:flex-row justify-between items-start max-w-7xl mx-auto">
   <h1 className="hidden lg:block text-[40px] font-bold text-black leading-[1.2] mb-6 lg:mb-0">
   Häufig gestellte <br /> Fragen
 </h1>
-    {/* <h1 className=" hidden text-2xl lg:text-[40px] flex justify-center font-bold text-black leading-[1.2] mb-6 lg:mb-0">
+<h1 className="block lg:hidden text-[28px] font-bold text-black leading-[1.2] mb-10 lg:mb-0">
   Häufig gestellte Fragen
-</h1> */}
+</h1>
+
+
+
+   
     {/* FAQ Section */}
-    <div className="columns-click w-full lg:w-[38rem]">
+    <div className="columns-click w-full lg:w-[38rem] px-1">
   {faqs.map((faq, index) => (
     <div 
       key={index} 
       className="bg-white mb-4 p-4 rounded-lg shadow-lg cursor-pointer" 
-      onClick={() => toggleAccordion(index)}  // Handle the click on the entire accordion div
+      onClick={() => toggleAccordion(index)}  
     >
       <div className="flex justify-between items-center relative">
-        <h2 className="text-sm lg:text-[15px] tracking-[.18px] p-2 text-black font-[600]">
+        <h2 className="text-sm lg:text-[15px] tracking-[.18px] p-1 text-black font-[600]">
           {faq.question}
         </h2>
 
-        <label 
-          className="container" 
-          onClick={(e) => {
-            e.stopPropagation();
-              
-            toggleAccordion(index); 
-          }}
-        >
+        <div className="container">
           <input type="checkbox" checked={activeIndex === index} readOnly />
           <div className="line"></div>
           <div className={`line line-indicator ${activeIndex === index ? 'active' : ''}`}></div>
-        </label>
+        </div>
       </div>
 
       {activeIndex === index && (
@@ -754,6 +751,7 @@ function Home() {
 
 
 
+
   </div>
 </div>
 
@@ -761,6 +759,7 @@ function Home() {
 
 <div className="part7 flex justify-center items-center w-full py-6">
   <div className="section3 part7-1 mb-[-21rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
+  <div className="footer_blur1"> </div>
   <div className="footer_blur hidden md:block"> </div>
 
     {/* Left Section */}
@@ -769,7 +768,7 @@ function Home() {
         Nur noch <span className="text-[#0cdc6a]">1 Schritt</span>...
       </h1>
 
-      <div className="description text-[14px] md:text-[16px] text-[#728291] leading-relaxed mt-3">
+      <div className="description text-[15px] md:text-[16px] text-[#728291] leading-relaxed mt-3">
         Verwandle dich vom kompletten Anfänger zum fortgeschrittenen <br className="hidden md:inline" />
         Trader in nur 7 Tagen. Warte nicht länger und sichere dir jetzt den <br className="hidden md:inline" />
         Zugang zu dieser einzigartigen und für dich kostenlosen Online- <br className="hidden md:inline" />
@@ -802,13 +801,13 @@ function Home() {
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative block md:hidden" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdd5372eaada0fae9eccc1_image%201385m.avif" alt="" />
 
       <img 
-        className='absolute w-[200px] inset-[82.70%_20%_0_0] sm:inset-[80.68%_0_0_52%]' 
+        className='absolute w-[200px] inset-[82.13%_20%_0_0] sm:inset-[79.18%_0_0_52%]' 
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" 
         alt="" 
       />
 
       <img 
-        className='absolute w-[200px] inset-[86.75%_0%_0_46%] sm:inset-[85.84%_0_0_69%]' 
+        className='absolute w-[200px] inset-[86.14%_0%_0_46%] sm:inset-[84.84%_0_0_69%] z-10' 
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" 
         alt="" 
       />
@@ -884,10 +883,10 @@ function Home() {
   </div>
 </div>
     <div className="content flex flex-col py-4 mt-[3rem] md:mt-[5rem]">
-      <div className="title-footer mb-[2rem] text-[#fff] text-[18px] md:text-[24px] font-[600] leading-[100%]">
+      <div className="title-footer mb-[2rem] text-[#fff] text-[24px] md:text-[24px] font-[600] leading-[100%]">
         Risikohinweis
       </div>
-      <div className="description-bottom text-[#ffffff3d] w-full md:w-[44rem] text-[12px] md:text-[14px]">
+      <div className="description-bottom text-[#ffffff8f] w-full font-[400] md:w-[44rem] text-[13px] md:text-[14px]">
       Der Handel mit Hebelprodukten (z.B. CFD´s und Forex Trades) oder anderen Finanzinstrumenten ist mit einem enormen Risiko verbunden und nicht für jeden geeignet. Es besteht die Möglichkeit, dass Sie einen Totalverlust erleiden oder sogar Verluste erleiden, die Ihre Investitionen übersteigen. Bevor Sie mit Hebelprodukten oder anderen Finanzinstrumenten handeln, sollten Sie sicherstellen, dass Sie alle damit verbunden Risiken verstanden haben. Im Übrigen verweisen wir auf unsere Risikohinweise auf: https://tradingfreaks.com/risikohinweis/. Es wird ausdrücklich klargestellt, dass wir (TF Daytrading GmbH/ www.tradingfreaks.com/) keine Anlageberatung anbieten und durchführen und insbesondere auch keinerlei konkrete Empfehlungen zu einem Wertpapier, Finanzprodukt oder -Instrument abgeben. Die Erwähnung bestimmter Wertpapiere oder Anlageprodukte stellen ausdrücklich keine Empfehlung zum Kaufen oder Verkaufen oder Halten dar. Sie handeln bzw. traden auf eigenes Risiko. Jegliche Haftung wird ausgeschlossen.
 <br />
 <br />

@@ -14,31 +14,8 @@ function Home() {
 
   const [showColumns, setShowColumns] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
-  const cardRefs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            observer.unobserve(entry.target); // Unobserve once animated
-          }
-        });
-      },
-      { threshold: 0.2 } // Adjust the threshold to your liking
-    );
-
-    cardRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      cardRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, []);
+  
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -76,35 +53,38 @@ function Home() {
   return (
     <main className="relative " style={{ fontFamily: "'Outfit', sans-serif" }}>
         <div className="light-bg">
-            
-     <header className="w-full h-[3.3rem] py-1 bg-[#fff] mx-auto">
-        <nav className="flex justify-around items-center h-full">
-          <div className="left-images">
-            <img
-              src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3ef7_logo.webp"
-              alt="Logo"
-              width={38}
-              height={32}
-            />
-          </div>
+        <div className="bg-white">
+  <header className="w-full max-w-[80rem] h-[3.3rem] py-1 bg-[#fff] mx-auto">
+    <nav className="flex justify-between items-center h-full px-4">
+      <div className="left-images">
+        <img
+          src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3ef7_logo.webp"
+          alt="Logo"
+          width={38}
+          height={32}
+        />
+      </div>
 
-          <div className="right-images flex items-center">
-            <img
-              src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
-              alt="Avatar"
-              width={114}
-              height={30.19}
-            />
-            <div className="text-nav ml-4 text-black text-[12px]">
-              Beretis <strong>2.145+</strong> Mal bestellt
-            </div>
-          </div>
-        </nav>
-      </header>
+      <div className="right-images flex items-center">
+        <img
+          src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+          alt="Avatar"
+          width={114}
+          height={30.19}
+        />
+        <div className="text-nav ml-4 text-black text-[12px]">
+          Beretis <strong>2.145+</strong> Mal bestellt
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
 
-      <div className="w-full relative z-[1000] flex flex-col items-center justify-center lg:mt-[3rem] mt-[2rem] sm:mt-5">
+
+
+<div className="w-[90%] max-w-[40rem] mx-auto relative z-[1000] flex flex-col items-center justify-center lg:mt-[3rem] mt-[2rem] sm:mt-1">
   <div
-    className="text-[12px] text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-2 flex ms-center uppercase mt-[4rem] sm:mt-2 fadeInUp"
+    className="text-[12px] text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-3 flex items-center uppercase mt-[1rem]  fadeInUp"
     style={{ animationDelay: "0s" }}
   >
     <span className="online h-3 w-3 bg-green-500 rounded-full mr-2"></span>
@@ -112,14 +92,14 @@ function Home() {
   </div>
 
   <h1
-    className="title-top text-center text-black text-[28px] md:text-[56px] tracking-[.7px] font-bold leading-[1.1] mt-6 sm:text-[22px] sm:leading-[1.2] fadeInUp"
+    className="title-top text-center text-black text-[32px] sm:text-[32px] font-[800] tracking-[.7px] leading-[1.1] mt-6 sm:leading-[1.2] sm:font-bold md:text-[56px] fadeInUp"
     style={{ animationDelay: "0.2s" }}
   >
     In nur 7 Tagen seriös <br /> Trading lernen
   </h1>
 
   <div
-    className="desc1 text-center w-[30rem] text-[16px] text-[#728291] tracking-[-.32px] leading-[1.5] my-4 px-4 sm:tracking-[.2px] sm:px-2 fadeInUp"
+    className="desc1 text-center w-[90%] max-w-[30rem] text-[14px] sm:text-[16px] text-[#728291] tracking-[-.32px] leading-[1.5] my-4 px-4 sm:tracking-[.2px] sm:px-2 fadeInUp"
     style={{ animationDelay: "0.4s" }}
   >
     Dein Start ins Daytrading mit Schritt für Schritt Anleitungen, sofort umsetzbaren Tipps, Brokerempfehlungen, Chartanalyse und DAX
@@ -129,7 +109,12 @@ function Home() {
   <div className="relative z-[1000]">
     <Button />
     <div className="flex items-center justify-center mt-[2rem] sm:mt-[1rem] fadeInUp" style={{ animationDelay: "0.8s" }}>
-      <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png" alt="Avatar" width={114} height={30.19} />
+      <img
+        src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+        alt="Avatar"
+        width={114}
+        height={30.19}
+      />
       <div className="text-people ml-4 text-black text-[12px] sm:text-[10px]">
         Beretis <strong>2.145+</strong> Mal bestellt
       </div>
@@ -138,23 +123,23 @@ function Home() {
 </div>
 
 
+
         
 
-      <img
-        className="absolute top-[3.3rem] inset-0 w-full h-50 object-cover z-10 opacity-100 bg-gray-80"
-        src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d7215fe0a981366df06f3c_Group%202087326459-p-2600.png"
-        alt="Large banner"
-        
-      />
+<img
+  className="absolute top-[3.3rem] inset-0 w-full h-[500px] sm:h-[500px] md:h-[600px] object-cover z-10 opacity-100 bg-gray-80"
+  src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d7215fe0a981366df06f3c_Group%202087326459-p-2600.png"
+  alt="Large banner"
+/>
 
 
-<div className="relative z-10 mt-[5rem] fadeInUp" style={{ animationDelay: "0.9s" }}>
+
+<div className="relative z-10 mt-[2rem] fadeInUp" style={{ animationDelay: "0.9s" }}>
   <img
-    className="images1 w-[600px] h-[300.02px] object-cover mx-auto relative sm:w-[90%] sm:h-auto md:w-[80%] lg:w-[77%] xl:w-[43%]"
+    className="images1 w-[150px] h-[75px] object-cover mx-auto relative sm:w-[50%] md:w-[70%] md:mt-[4.4rem] lg:w-[77%] xl:w-[43%]"
     src="images/dashboard.webp"
     alt="New Image"
-    loading='lazy'
-    
+    loading="lazy"
   />
 
   <div
@@ -751,26 +736,42 @@ function Home() {
 </h1> */}
     {/* FAQ Section */}
     <div className="columns-click w-full lg:w-[38rem]">
-      {faqs.map((faq, index) => (
-        <div key={index} className="bg-white mb-4 p-4 rounded-lg shadow-lg cursor-pointer" onClick={() => toggleAccordion(index)}>
-          <div className="flex justify-between items-center relative">
-            <h2 className="text-sm lg:text-[15px] tracking-[.18px] p-2 text-black font-[600]">{faq.question}</h2>
+  {faqs.map((faq, index) => (
+    <div 
+      key={index} 
+      className="bg-white mb-4 p-4 rounded-lg shadow-lg cursor-pointer" 
+      onClick={() => toggleAccordion(index)}  // Handle the click on the entire accordion div
+    >
+      <div className="flex justify-between items-center relative">
+        <h2 className="text-sm lg:text-[15px] tracking-[.18px] p-2 text-black font-[600]">
+          {faq.question}
+        </h2>
 
-            <label className="container">
-              <input type="checkbox" checked={activeIndex === index} readOnly />
-              <div className="line"></div>
-              <div className={`line line-indicator ${activeIndex === index ? 'active' : ''}`}></div>
-            </label>
-          </div>
+        <label 
+          className="container" 
+          onClick={(e) => {
+            e.stopPropagation();
+              
+            toggleAccordion(index); 
+          }}
+        >
+          <input type="checkbox" checked={activeIndex === index} readOnly />
+          <div className="line"></div>
+          <div className={`line line-indicator ${activeIndex === index ? 'active' : ''}`}></div>
+        </label>
+      </div>
 
-          {activeIndex === index && (
-            <div className="mt-2 text-[#0006] text-xs lg:text-[14px] p-2 leading-[160%]">
-              {faq.answer}
-            </div>
-          )}
+      {activeIndex === index && (
+        <div className="mt-2 text-[#0006] text-xs lg:text-[14px] p-2 leading-[160%]">
+          {faq.answer}
         </div>
-      ))}
+      )}
     </div>
+  ))}
+</div>
+
+
+
   </div>
 </div>
 

@@ -159,7 +159,7 @@ function Home() {
 
 
 
-<div className="grid grid-cols-2 gap-4 sm:w-[90%] md:grid-cols-6 md:w-[70%]  lg:w-[190%] xl:w-[73%] m-auto mt-[5rem]">
+<div className="grid grid-cols-2 gap-4 sm:w-[90%] md:grid-cols-6 md:w-[70%]  lg:w-[190%] xl:w-[73%] m-auto">
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c5162bf58d9ecb4f3b9_01.avif" alt="" />
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c50de0cca26456f73d0_02.avif" alt="" />
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c51fe74fff065641ef3_03.avif" alt="" />
@@ -168,7 +168,7 @@ function Home() {
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c509710055dd7251e0a_06.avif" alt="" />
 </div>
 
-<div className="Tradingdeine w-full h-auto mt-[5rem] px-4 mb-[4rem] " >
+<div className="Tradingdeine w-full h-auto mt-[5rem] px-4 mb-[5rem] " >
   <h1 className="font-bold text-[30px] sm:text-[45px] tracking-[.4px] leading-[1.2] text-center fadeInUp" style={{ animationDelay: "0.9s" }}>
     Wie ergologreiches Trading deine <br />
     <span className="block text-[#0cdc6a] fadeInUp" style={{ animationDelay: "0.9s" }}>Zuknfit Verandern kann</span>
@@ -703,9 +703,9 @@ function Home() {
 
 
 
-<div className="part5 w-full h-auto bg-[#041212] rounded-[20px] flex flex-col lg:flex-row justify-center items-center mt-10 mb-10 px-4 lg:px-0">
+<div className="part5 w-full h-auto bg-[#041212] rounded-[20px] flex flex-col lg:flex-row justify-center items-center mt-[6rem] mb-10 px-4 lg:px-0">
   
-  <div className="left-img w-full lg:w-[34rem] h-auto mt-4 lg:mt-8 mb-4 lg:mb-5">
+  <div className="left-img w-full lg:w-[34rem] h-auto mt-[3rem] lg:mt-[6rem] mb-[3rem] lg:mb-[6rem]">
     <img src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd24c802a20ec487fa78e0_image%201376-p-1080.webp" alt="dada" loading='lazy' className="w-full lg:w-auto" />
   </div>
 
@@ -831,13 +831,13 @@ function Home() {
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative block md:hidden" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdd5372eaada0fae9eccc1_image%201385m.avif" alt="" />
 
       <img 
-        className='absolute w-[200px] inset-[82.63%_19%_0_0] sm:inset-[80.33%_0_0_52%]' 
+        className='absolute w-[200px] inset-[82.70%_20%_0_0] sm:inset-[80.68%_0_0_52%]' 
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" 
         alt="" 
       />
 
       <img 
-        className='absolute w-[200px] inset-[86.64%_0%_0_46%] sm:inset-[85.57%_0_0_66%]' 
+        className='absolute w-[200px] inset-[86.75%_0%_0_46%] sm:inset-[85.84%_0_0_69%]' 
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" 
         alt="" 
       />

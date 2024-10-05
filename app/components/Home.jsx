@@ -352,50 +352,17 @@ function Home() {
 </div>
 
 <div className="part3 bg-gradient-[#f1f3f5, #fff]">
-<div className="mt-[6rem] flex justify-center">
-      {/* <div className="trustscore text-[18px]">Hervirragend</div>
-      
+<div className="mt-[6rem] flex justify-center items-center">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00B67A" className="w-6 h-6 ml-2">
+    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+  </svg>
+  <p className="font-[600] text-[14px] text-center">Trustpilot</p>
+</div>
 
 
-      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem] ml-[1rem]">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-      </div>
-      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-      </div>
-      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-      </div>
-      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-      </div>
-      <div className="stars2 flex bg-[#00b67a] mr-1 h-[1.5rem]">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" className="w-5 h-6 items-center m-1 mt-[-0.1rem]">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-      </div>
-
-      <p>196 Bewetungen auf</p> */}
 
 
-       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" className="w-6 h-6 ml-2">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-      <p className='font-[600]'>Trustpilot</p>
-    </div>
-    
-
-
-  <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[3rem] z-0 px-5">
+  <div className="flex flex-wrap justify-center gap-4 w-[100%] h-auto mt-[2.5rem] z-0 px-5">
   <div className="relative flex flex-col items-start rounded-[12px] pr-[32px] pl-[32px] bg-[#fff] p-4 pt-[2rem] w-[25.5rem] h-auto text-[28px] tracking-[.35px] leading-[100%] font-[600]">
     <span className="text-[#0ec661]">2.145+</span> 
     <span className="block text-[28px] tracking-[.35px] leading-[100%] font-[600] mt-[0.5rem]">Zurfriedene</span>

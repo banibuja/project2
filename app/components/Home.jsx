@@ -797,11 +797,19 @@ function Home() {
 
     {/* Right Section */}
     <div className="right mt-[2rem] md:mt-[4rem] w-full md:w-auto">
+
+
       
-    
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative hidden md:block" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385-p-1080.avif" alt="" />
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative block md:hidden" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdd5372eaada0fae9eccc1_image%201385m.avif" alt="" />
+<div className="relative bottom-[30.9rem] lg:bottom-[26.8rem]">
+<img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" alt="" />
 
+</div>
+<div className="relative bottom-[8.8rem] left-[12rem] lg:bottom-[8.8rem] lg:left-[19.8rem]">
+<img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" />
+
+</div>
 
 
     </div>

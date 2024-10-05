@@ -171,7 +171,7 @@ body {
     transform: translate(-50%);
   }
   .footer_blur1{
-    filter: blur(120px);
+    filter: blur(180px);
     background-image: linear-gradient(90deg, #13f97b, #00d560);
     border-radius: 100%;
     width: 550px;

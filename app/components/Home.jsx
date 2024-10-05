@@ -758,7 +758,7 @@ function Home() {
 
 
 <div className="part7 flex justify-center items-center w-full py-6">
-  <div className="section3 part7-1 mb-[-21rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
+  <div className="section3 part7-1 mb-[-19rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
   <div className="footer_blur hidden md:block"> </div>
   <div className="footer_blur1 block lg:hidden"></div>
 
@@ -779,7 +779,7 @@ function Home() {
       {/* Button Section */}
       <div className="relative z-[1000] text-[#000] hidden md:block">
       <Button />
-  <div className="flex items-center justify-start  mb-[4rem] mt-[2rem] sm:mt-[1rem]">
+  <div className="flex items-center justify-start  mb-[2rem] mt-[2rem] sm:mt-[1rem]">
           <img
             src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
             alt="Avatar"
@@ -802,14 +802,14 @@ function Home() {
       
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative hidden md:block" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385-p-1080.avif" alt="" />
     <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative block md:hidden" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdd5372eaada0fae9eccc1_image%201385m.avif" alt="" />
-<div className="relative bottom-[30.9rem] lg:bottom-[26.8rem]">
+<div className="absolute bottom-[117.9rem] lg:bottom-[83.4rem]">
 <img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" alt="" />
 
 </div>
-<div className="relative bottom-[8.8rem] left-[12rem] lg:bottom-[8.8rem] lg:left-[19.8rem]">
+<div className="absolute bottom-[90rem] left-[12rem] lg:bottom-[59.5rem] lg:left-[81.5rem]">
 <img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" />
 
-</div>
+</div> 
 
 
     </div>

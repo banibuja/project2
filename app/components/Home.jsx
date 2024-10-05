@@ -779,7 +779,7 @@ function Home() {
 <img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" />
 
 </div> 
-<div className="footer_blur1 block lg:hidden"></div>
+<div className="footer_blur1 lg:hidden"></div>
 
 
 

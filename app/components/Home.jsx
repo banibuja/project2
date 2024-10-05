@@ -56,11 +56,11 @@ function Home() {
         <div className="bg-white">
         <header className="w-full max-w-[80rem] h-[5rem] py-1 bg-[#fff] mx-auto sm:h-[3.8rem]">
   <nav className="flex justify-between items-center  h-full px-4">
-    <div className="left-images">
+    <div className="left-imagess">
       <img
         src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3ef7_logo.webp"
         alt="Logo"
-        className="w-[118px] h-auto sm:w-[40px]"  
+        className="w-[40px] h-auto sm:w-[40px]"  
       />
     </div>
 

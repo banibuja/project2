@@ -160,7 +160,7 @@ body {
 
 
   .footer_blur {
-    filter: blur(200px);
+    filter: blur(190px);
     background-image: linear-gradient(90deg, #13f97b, #00d560);
     border-radius: 100%;
     width: 550px;

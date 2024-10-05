@@ -81,7 +81,7 @@ function Home() {
 
 
 
-<div className="w-[90%] max-w-[39rem] mx-auto relative z-[1000] flex flex-col items-center justify-center lg:mt-[3rem] mt-[2rem] sm:mt-1">
+<div className="w-[90%] max-w-[40rem] mx-auto relative z-[1000] flex flex-col items-center justify-center lg:mt-[3rem] mt-[2rem] sm:mt-1">
   <div
     className="text-[12px] text-black font-bold bg-white itepy-2 rounded-3xl px-4 py-3 flex items-center uppercase mt-[1rem]  fadeInUp"
     style={{ animationDelay: "0s" }}
@@ -90,11 +90,13 @@ function Home() {
     Kostenloser Trading-Kurs
   </div>
   <h1
-  className="title-top text-center text-black text-[32px] sm:text-[32px] font-extrabold tracking-[-.7px] leading-[1.1] mt-6 sm:leading-[1.1] sm:font-bold md:text-[56px] fadeInUp"
-  style={{ animationDelay: "0.2s" }}
+  className="title-top text-center text-black text-[32px] sm:text-[32px] font-bold tracking-[-.7px] leading-[1.1] mt-6 sm:leading-[1.1] md:text-[56px] fadeInUp"
+  style={{ animationDelay: "0.2s", fontFamily: "'Outfit', sans-serif", fontWeight: 700 }}
 >
   In nur 7 Tagen seriös <br /> Trading lernen
 </h1>
+
+
 
 
   <div
@@ -119,7 +121,7 @@ function Home() {
       </div>
     </div>
   </div>
-</div>
+  </div>
 
 
 
@@ -135,17 +137,20 @@ function Home() {
 
 <div className="relative z-10 mt-[2rem] fadeInUp" style={{ animationDelay: "0.9s" }}>
   <img
-    className="images1 w-[200px] h-[100px] object-cover mx-auto relative sm:w-[50%] sm:h-auto md:w-[70%]  md:mt-[4.4rem] lg:w-[77%] xl:w-[43%]"
+    className="images1 w-[60px] h-auto object-cover mx-auto relative sm:w-[30%] sm:h-auto md:w-[50%] lg:w-[70%] xl:w-[43%]"
     src="images/dashboard.webp"
     alt="New Image"
-    loading='lazy'
+    loading="lazy"
   />
 
   <div
-    className="blur-white absolute inset-auto w-full h-[250px] bg-gradient-to-b from-[#f1f3f500] to-[#f1f3f5] z-30"
+    className="blur-white absolute inset-auto w-full h-[150px] sm:h-[200px] md:h-[250px] bg-gradient-to-b from-[#f1f3f500] to-[#f1f3f5] z-30"
     style={{ inset: 'auto 0% -1%' }}
   ></div>
 </div>
+
+
+
 
 <div className="grid grid-cols-2 gap-4 sm:w-[90%] md:grid-cols-6 md:w-[70%]  lg:w-[190%] xl:w-[73%] m-auto mt-[5rem]">
   <img className="h-20 w-full object-contain" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bd0c5162bf58d9ecb4f3b9_01.avif" alt="" />
@@ -778,7 +783,7 @@ function Home() {
 
 <div className="part7 flex justify-center items-center w-full py-16">
   <div className="section3 part7-1 mb-[-21rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
-  <div className="footer_blur"> </div>
+  <div className="footer_blur hidden md:block"> </div>
 
     {/* Left Section */}
     <div className="left mt-[2rem] md:mt-[7rem] text-center md:text-left w-full md:w-auto">
@@ -808,6 +813,7 @@ function Home() {
           </div>
         </div>
 </div>
+     
 </div>
 
     {/* Right Section */}
@@ -817,6 +823,7 @@ function Home() {
       style={{inset: "-55px auto auto 0%"}} />
       <img className='w-[246px] ' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" /> */}
     </div>
+    
 
   </div>
 </div>
@@ -825,45 +832,49 @@ function Home() {
   <div className="part7-1 max-w-full md:max-w-8xl w-full md:w-[85rem] rounded-[20px] bg-[#04120b] flex flex-col mx-auto pb-[80px] py-[30px] px-[20px] md:px-[80px]">
 
     {/* Footer Top Section */}
-    <div className="content mt-[10rem] md:mt-[20rem] flex flex-col md:flex-row items-center justify-between border-b border-solid border-[#ffffff29]">
+    <div className="content mt-[10rem] md:mt-[20rem] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between border-b border-solid border-[#ffffff29]">
 
-      {/* Left Images */}
-      <div className="left-images mb-[3rem]">
-        <img
-          src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3eca_logo.webp"
-          alt="Logo"
-          width={38}
-          height={32}
-        />
-      </div>
+{/* Left Images */}
+<div className="left-images mb-[3rem]">
+  <img
+    src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/6601dc8887b1e34f1fff3eca_logo.webp"
+    alt="Logo"
+    width={38}
+    height={32}
+  />
+</div>
 
-      {/* Right List */}
-      <div className="list-right flex items-center">
-        <ul className="list-none flex space-x-4 md:space-x-8 text-[#fff] mb-[3rem] text-[12px] md:text-[14px]">
+{/* Right List */}
+<div className="list-right flex flex-col items-start justify-start h-full  md:p-0">
+  <ul className="list-none flex flex-col items-start space-y-2 text-[14px] md:flex-row md:space-x-8 md:space-y-0 text-[#fff] mb-[3rem]  md:text-[14px]">
+    <li className="text-left py-2">Trader Training</li>
+    <li className="text-left py-2">Karriere</li>
+    <li className="text-left py-2">Kennenlerngespräch</li>
+    <li className="text-left py-2">Kundenmeinungen</li>
+  </ul>
+</div>
 
-          <li>Trader Training</li>
-          <li>Karriere</li>
-          <li>Kennenlerngespräch</li>
-          <li>Kundenmeinungen</li>
-        </ul>
-      </div>
-    </div>
+</div>
+
+
+
+
     {/* Footer Bottom Section */}
-    <div className="content flex flex-col md:flex-row items-center justify-between border-b border-solid border-[#ffffff29] py-4">
-
-      {/* Left List */}
-      <div className="text-left">
-        <ul className="list-none flex space-x-4 md:space-x-8 text-[#fff] text-[12px] md:text-[14px] mt-[2.5rem] mb-[2.5rem] font-[500] tracking-[.175px]">
-          <li>Datenschutz</li>
-          <li>Impressum</li>
-          <li>Risikohnwis</li>
-        </ul>
-      </div>
-      {/* Right Copyright Text */}
-      <div className="text text-[#ffffff3d] text-[10px] md:text-[12px] mt-[2.5rem] mb-[2.5rem]">
-        © 2023 TradingFreaks® All rights reserved
-      </div>
-    </div>
+    <div className="content flex flex-col md:flex-row items-start md:items-center justify-between border-b border-solid border-[#ffffff29] py-4">
+  {/* Left List */}
+  <div className="text-left">
+    <ul className="list-none flex space-x-4 md:space-x-8 text-[#fff] text-[14px] md:text-[14px] mt-[2.5rem] mb-[2.5rem] font-[500] tracking-[.175px]">
+      <li>Datenschutz</li>
+      <li>Impressum</li>
+      <li>Risikohnwis</li>
+    </ul>
+  </div>
+  
+  {/* Right Copyright Text */}
+  <div className="text text-[#ffffff3d] text-[14px] md:text-[12px] ">
+    © 2023 TradingFreaks® All rights reserved
+  </div>
+</div>
     <div className="content flex flex-col py-4 mt-[3rem] md:mt-[5rem]">
       <div className="title-footer mb-[2rem] text-[#fff] text-[18px] md:text-[24px] font-[600] leading-[100%]">
         Risikohinweis

@@ -50,7 +50,6 @@ const Button = () => {
         </div>
 
       
-        <div className="p-[5rem]">
   {/* Modal */}
   {showModal && (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000] backdrop-blur-md p-5">
@@ -149,7 +148,6 @@ const Button = () => {
       </div>
     </div>
   )}
-</div>
 
 
 

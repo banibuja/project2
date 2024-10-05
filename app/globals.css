@@ -106,7 +106,7 @@ body {
 
   @media (max-width: 640px) {
     .button {
-        width: 22rem;
+        /* width: 22rem; */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -259,4 +259,12 @@ body {
 
 .animate {
   opacity: 1; /* Ensure the card is visible after animation */
+}
+
+
+
+@media (max-width: 768px) {
+  .images-mobile {
+    inset: 80% 0 0 10%;
+  }
 }

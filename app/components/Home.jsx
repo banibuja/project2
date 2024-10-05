@@ -788,7 +788,7 @@ function Home() {
 
 
 
-<div className="part7 flex justify-center items-center w-full py-16">
+<div className="part7 flex justify-center items-center w-full py-6">
   <div className="section3 part7-1 mb-[-21rem] flex flex-col md:flex-row items-start justify-between max-w-7xl w-full md:w-[85rem] rounded-[20px] mx-auto bg-white pb-[80px] py-[30px] px-[20px] md:px-[80px]">
   <div className="footer_blur hidden md:block"> </div>
 
@@ -806,8 +806,8 @@ function Home() {
       </div>
 
       {/* Button Section */}
-      <div className="relative z-[1000] text-[#000]">
-  <Button />
+      <div className="relative z-[1000] text-[#000] hidden md:block">
+      <Button />
   <div className="flex items-center justify-start  mb-[4rem] mt-[2rem] sm:mt-[1rem]">
           <img
             src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
@@ -825,12 +825,42 @@ function Home() {
 
     {/* Right Section */}
     <div className="right mt-[2rem] md:mt-[4rem] w-full md:w-auto">
-      <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385.avif" alt="" />
-      {/* <img className='w-[246px] ' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" alt="" 
-      style={{inset: "-55px auto auto 0%"}} />
-      <img className='w-[246px] ' src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" /> */}
-    </div>
+      
     
+    <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative hidden md:block" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35e8d97a420409c5f60_image%201385-p-1080.avif" alt="" />
+    <img className="w-full md:w-[518px] h-auto mx-auto md:mx-0 relative block md:hidden" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdd5372eaada0fae9eccc1_image%201385m.avif" alt="" />
+
+      <img 
+        className='absolute w-[200px] inset-[82.63%_19%_0_0] sm:inset-[80.33%_0_0_52%]' 
+        src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" 
+        alt="" 
+      />
+
+      <img 
+        className='absolute w-[200px] inset-[86.64%_0%_0_46%] sm:inset-[85.57%_0_0_66%]' 
+        src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" 
+        alt="" 
+      />
+    
+
+    </div>
+    <div className="relative z-[1000] text-[#000] block md:hidden"> 
+  <Button />
+  <div className="flex items-center justify-start mb-[4rem] mt-[2rem] sm:mt-[1rem]">
+    <img
+      src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66d71361e6381ef5a1d07c03_avatars%202k.png"
+      alt="Avatar"
+      width={114}
+      height={30.19}
+    />
+    <div className="text-people ml-4 text-black text-[12px] sm:text-[10px]">
+      Beretis <strong>2.145+</strong> Mal bestellt
+    </div>
+  </div>
+</div>
+
+
+  
 
   </div>
 </div>

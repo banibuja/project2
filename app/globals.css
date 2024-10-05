@@ -185,7 +185,33 @@ body {
 
   }
 
+
 }
+
+
+
+@media (max-width: 480px) {
+  .img-foot {
+    bottom: 159.2vh;
+    left: 47vw;
+  }
+}
+@media (min-width: 430px) {
+  .img-foot {
+    bottom: 154.4vh;
+    left: 47.5vw;
+  }
+}
+
+@media (max-width: 360px) {
+  .img-foot {
+    bottom: 207.4vh;
+    left: 47vw;
+  }
+}
+
+
+
 
 
 

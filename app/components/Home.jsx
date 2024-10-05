@@ -775,7 +775,7 @@ function Home() {
 <img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bddb6c5a17773ef43ca625_new%204.avif" alt="" />
 
 </div>
-<div className="absolute bottom-[91rem] left-[12rem] lg:bottom-[59.5rem] lg:left-[81.5rem]">
+<div className="img-foot absolute bottom-[90rem] left-[12rem] lg:bottom-[59.5rem] lg:left-[81.5rem]">
 <img className="w-[200px]" src="https://cdn.prod.website-files.com/6601dc8887b1e34f1fff3e59/66bdc35512c1734c225b3e8b_5.avif" alt="" />
 
 </div> 

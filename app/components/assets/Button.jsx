@@ -90,7 +90,6 @@ const Button = () => {
             placeholder="E-Mail Adresse"
             required
           />
-
           <div className="block w-full mb-4 rounded-[10px] bg-[#edf1f6] p-[15px] relative z-[1001]">
             <PhoneInput
               country={'de'}
@@ -112,8 +111,10 @@ const Button = () => {
                 name: 'phone',
                 required: true,
               }}
+              disableCountryCode={true} 
             />
           </div>
+
 
           <div className="button1 bg-[#13f97b] mt-[2rem] h-20 w-[320px] rounded-lg p-4 cursor-pointer flex items-center justify-between text-[16px] font-[600] transition-all duration-500 ease-in-out shadow-[0_24px_32px_-20px_rgba(19,249,123,0)] hover:scale-105 relative overflow-hidden">
             <div className="btn-text w-full text-center z-10">
